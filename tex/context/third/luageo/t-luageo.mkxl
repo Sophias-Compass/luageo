@@ -14,17 +14,6 @@
 %  ftp://ftp.blm.gov/pub/gis/wdbprg.zip
 % According to https://ctan.math.washington.edu/tex-archive/graphics/pstricks/contrib/pst-geo/doc/pst-geo-doc.pdf
 
-%\unprotect
-%
-%\defineMPinstance % Should I start a MetaPost instance?
-%  [luageo]
-%  [\s!format=metafun,
-%   \s!extensions=\v!yes,
-%   \s!initializations=\v!yes,
-%   \c!method=\s!double]
-%
-%\protect
-
 \startMPdefinitions
     loadmodule "luageo" ;
 \stopMPdefinitions
@@ -54,6 +43,9 @@
 %\setupbodyfont   [dejavu-condensed,10pt]
 %\setupwhitespace [small]
 
+\usetypescriptfile[libertinus]
+\setupbodyfont [libertinus,11pt]%
+
 %\enabletrackers[metapost*]
 %\enabletrackers[metapost.scripts]
 %\enabletrackers[metapost.lua]
@@ -62,7 +54,7 @@
 
 \startsubject [title=luageo]
 
-I should write some documentation
+I should write some documentation.
 
 Drawn with the luageo module:
 \blank[big]
@@ -78,17 +70,7 @@ The globe below uses a buffer so that it is not redrawn with every typeset.
 \startbuffer[demo]
 \usemodule [luageo]
 \startMPpage
-   GlobeDiameter := 5cm ;
-   fill fullcircle scaled GlobeDiameter withcolor .9white ;    % Fill a circle with the water color.
-   fill globe(23, 0) scaled .5GlobeDiameter withcolor .75white ;% Draw the land.
-   draw fullcircle scaled GlobeDiameter withcolor black ;      % Add a border, if you want.
-\stopMPpage
-\stopbuffer
-
-\typesetbuffer[demo]
-
-\startMPcode
-    GlobeDiameter := 7cm ;
+    GlobeDiameter := 8cm ;
     fill fullcircle
         scaled GlobeDiameter
         withcolor .7white + .3blue;
@@ -105,27 +87,10 @@ The globe below uses a buffer so that it is not redrawn with every typeset.
     draw fullcircle
         scaled GlobeDiameter
         withcolor black ;
-\stopMPcode
+\stopMPpage
+\stopbuffer
 
-\startMPcode
-    GlobeDiameter := 5cm ;
-    fill fullcircle
-        scaled GlobeDiameter
-        withcolor .7white + .3blue;
-    path p ; p := MP.globe(23, 0)
-        scaled .5GlobeDiameter
-    ;
-    draw p
-        withpen pencircle scaled .2mm
-        withcolor blue
-        withtransparency (1,.5) ;
-    fill p
-        withcolor darkgreen
-        withtransparency (1,.5) ;
-    draw fullcircle
-        scaled GlobeDiameter
-        withcolor black ;
-\stopMPcode
+\typesetbuffer[demo]
 
 
 \stopsubject
