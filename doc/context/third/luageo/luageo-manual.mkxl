@@ -14,31 +14,9 @@
 %  ftp://ftp.blm.gov/pub/gis/wdbprg.zip
 % According to https://ctan.math.washington.edu/tex-archive/graphics/pstricks/contrib/pst-geo/doc/pst-geo-doc.pdf
 
-\startMPdefinitions
-    loadmodule "luageo" ;
-\stopMPdefinitions
+\usepath[../../../../tex/context/third/luageo,../../../../tex/context/third/luageo/data] % Remove when the module is in the tree.
 
-\registerctxluafile{t-luageo}{}
-
-% mp-geo provides a color, in French, for each country. These should probably be confined to a namespace for the module. At present they are not used.
-%
-%\definecolor[rouge][red]
-%\definecolor[bleu][blue]
-%\definecolor[noir][black]
-%\definecolor[blanc][white]
-%\definecolor[orange][r=1, g= 0.5, b=0]
-%\definecolor[violet][r=1, g=0, b=1]
-%\definecolor[rose][r=1, g=0.7, b=0.7]
-%\definecolor[cielfonce][r=0.25, g=0.75, b=1]
-%\definecolor[ciel][r=0, g=1, b=1]
-%\definecolor[orangevif][r=1, g=0.25, b=0.1]
-%\definecolor[vert][green]
-%\definecolor[jaune][r=1, g=1, b=0]
-%\definecolor[gris][0.8*white]
-%\definecolor[tan][r=0.824, b=0.705, b=0.55]
-
-
-\continueifinputfile{t-luageo.mkxl}
+\usemodule[luageo]
 
 \usetypescriptfile[libertinus]
 \setupbodyfont [libertinus,11pt]%
@@ -49,7 +27,7 @@
 
 \starttext
 
-\startsubject [title=luageo]
+\starttitle[title=luageo]
 
 I should write some documentation.
 
@@ -90,6 +68,6 @@ The globe below uses a buffer so that it is not redrawn with every typeset.
 \typesetbuffer[demo]
 
 
-\stopsubject
+\stoptitle
 
 \stoptext
