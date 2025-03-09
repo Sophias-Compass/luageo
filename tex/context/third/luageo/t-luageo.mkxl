@@ -9,16 +9,50 @@
 %D         author=Gavin Polhemus,
 %D           date=\currentdate,
 %D      copyright={Gavin Polhemus}]
+%C
+%C This comment should have license information.
+%C Data source: GLOBE Binaries DECODING : World Public Domain Dbase : F.Pospeschil, A.Rivera (1999)
+%C  ftp://ftp.blm.gov/pub/gis/wdbprg.zip
+%C According to https://ctan.math.washington.edu/tex-archive/graphics/pstricks/contrib/pst-geo/doc/pst-geo-doc.pdf
 
-% Data source: GLOBE Binaries DECODING : World Public Domain Dbase : F.Pospeschil, A.Rivera (1999)
-%  ftp://ftp.blm.gov/pub/gis/wdbprg.zip
-% According to https://ctan.math.washington.edu/tex-archive/graphics/pstricks/contrib/pst-geo/doc/pst-geo-doc.pdf
+% begin info
+%
+% title   : <a short title to explain the module>
+% comment : <a longer description which explains the purpose of the module>
+% status  : <current status of the module>
+%
+% end info
+
+\startmodule[luageo]
+
+\unprotect
+
+%\defineMPinstance
+%  [luageo]
+%  [\s!format=metafun,
+%   \s!extensions=\v!yes,
+%   \s!initializations=\v!yes,
+%   \c!method=\s!double]
 
 \startMPdefinitions
     loadmodule "luageo" ;
 \stopMPdefinitions
 
 \registerctxluafile{t-luageo}{}
+
+%  % Module's ConTeXt code from here to \protect. Example of a namespace and a module parameter
+
+%  \installnamespace {luageo}
+%  \installcommandhandler       \????luageo      {luageo}      \????luageo
+
+%  \setupmodule[color=newman]
+%  \processaction[\currentmoduleparameter{color}]
+%    [    newman=>\def\BColor{red},
+%       gottlieb=>\def\BColor{yellow},
+%         rothko=>\def\BColor{blue},
+%     \v!unknown=>\def\BColor{white},
+%     \v!default=>\def\BColor{red}]
+%  \setupbackgrounds[page][background=color,backgroundcolor=\BColor]
 
 % mp-geo provides a color, in French, for each country. These should probably be confined to a namespace for the module. At present they are not used.
 %
@@ -37,8 +71,14 @@
 %\definecolor[gris][0.8*white]
 %\definecolor[tan][r=0.824, b=0.705, b=0.55]
 
+\protect
+
+\stopmodule
 
 \continueifinputfile{t-luageo.mkxl}
+
+%\setupcolors[state=start]
+%\usemodule[luageo][color=rothko] % example of a module parameter
 
 \usetypescriptfile[libertinus]
 \setupbodyfont [libertinus,11pt]%
