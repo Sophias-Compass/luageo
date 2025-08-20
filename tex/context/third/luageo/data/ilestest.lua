@@ -1,4 +1,6 @@
-Island    {
+local addisland = moduledata.geo.addisland
+
+addisland {
   color = "vert",
   boundary =    {
     {2700, 0},
@@ -6,7 +8,7 @@ Island    {
     {2700, -2700},
   }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =    {
     {2700, 5400},

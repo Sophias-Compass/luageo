@@ -1,16 +1,18 @@
-Country{
+local addcountry = moduledata.geo.addcountry
+
+addcountry {
 	file = "mexique.dat",
 	color = "violet",
 }
-Country{
+addcountry {
 	color = "orange",
 	file = "usa1.dat",
 }
-Country{
+addcountry {
 	file = "usa2.dat",
 	color = "orange",
 }
-Country{
+addcountry {
 	file = "canada.dat",
 	color = "jaune",
 }

@@ -1,192 +1,194 @@
-Country{
+local addcountry = moduledata.geo.addcountry
+
+addcountry {
 	file = "finlande.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "norvege.dat",
 	color = "bleu"
 }
-Country{
+addcountry {
 	file = "suede.dat",
 	color = "rouge"
 }
-Country{
+addcountry {
 	file = "estonie.dat",
 	color = "violet"
 }
-Country{
+addcountry {
 	file = "belarussie.dat",
 	color = "bleu"
 }
-Country{
+addcountry {
 	file = "lettonie.dat",
 	color = "rose"
 }
-Country{
+addcountry {
 	file = "lithuanie1.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "lithuanie2.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "russie2.dat",
 	color = "rouge"
 }
-Country{
+addcountry {
 	file = "ukraine.dat",
 	color = "orange"
 }
-Country{
+addcountry {
 	file = "pologne.dat",
 	color = "rose"
 }
-Country{
+addcountry {
 	file = "slovaquie.dat",
 	color = "bleu"
 }
-Country{
+addcountry {
 	file = "tcheque.dat",
 	color = "gris"
 }
-Country{
+addcountry {
 	file = "moldavie.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "roumanie.dat",
 	color = "rouge"
 }
-Country{
+addcountry {
 	file = "bulgarie.dat",
 	color = "orange"
 }
-Country{
+addcountry {
 	file = "turquie2.dat",
 	color = "violet"
 }
-Country{
+addcountry {
 	file = "grece.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "macedoine.dat",
 	color = "vert"
 }
-Country{
+addcountry {
 	file = "yougoslavie.dat",
 	color = "bleu"
 }
-Country{
+addcountry {
 	file = "albanie.dat",
 	color = "rouge"
 }
-Country{
+addcountry {
 	file = "bosnie1.dat",
 	color = "orange"
 }
-Country{
+addcountry {
 	file = "bosnie2.dat",
 	color = "gris"
 }
-Country{
+addcountry {
 	file = "croatie.dat",
 	color = "rose"
 }
-Country{
+addcountry {
 	file = "hongrie.dat",
 	color = "vert"
 }
-Country{
+addcountry {
 	file = "autriche.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "slovenie.dat",
 	color = "orange"
 }
-Country{
+addcountry {
 	file = "italie.dat",
 	color = "vert"
 }
-Country{
+addcountry {
 	file = "sanmarin.dat",
 	color = "bleu"
 }
-Country{
+addcountry {
 	file = "allemagne1.dat",
 	color = "vert"
 }
-Country{
+addcountry {
 	file = "allemagne2.dat",
 	color = "vert"
 }
-Country{
+addcountry {
 	file = "danemark.dat",
 	color = "violet"
 }
-Country{
+addcountry {
 	file = "liechtenstein.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "suisse.dat",
 	color = "rouge"
 }
-Country{
+addcountry {
 	file = "paysbas.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "luxembourg.dat",
 	color = "violet"
 }
-Country{
+addcountry {
 	file = "belgique.dat",
 	color = "orange"
 }
-Country{
+addcountry {
 	file = "france.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "andorre.dat",
 	color = "gris"
 }
-Country{
+addcountry {
 	file = "monaco.dat",
 	color = "gris"
 }
-Country{
+addcountry {
 	file = "espagne.dat",
 	color = "rouge"
 }
-Country{
+addcountry {
 	file = "portugal.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "gibraltar.dat",
 	color = "gris"
 }
-Country{
+addcountry {
 	file = "angleterre.dat",
 	color = "gris"
 }
-Country{
+addcountry {
 	file = "ecosse.dat",
 	color = "jaune"
 }
-Country{
+addcountry {
 	file = "paysdegalles.dat",
 	color = "rouge"
 }
-Country{
+addcountry {
 	file = "irelandenord.dat",
 	color = "bleu"
 }
-Country{
+addcountry {
 	file = "irelande.dat",
 	color = "vert"
 }

@@ -1,200 +1,202 @@
-Country{
+local addcountry = moduledata.geo.addcountry
+
+addcountry {
 	file = "somalie.dat",
 	color = "jaune",
 }
-Country{
+addcountry {
 	file = "djibouti.dat",
 	color = "vert",
 }
-Country{
+addcountry {
 	file = "eritre.dat",
 	color = "bleu",
 }
-Country{
+addcountry {
 	file = "ethiopie.dat",
 	color = "rouge",
 }
-Country{
+addcountry {
 	file = "soudan.dat",
 	color = "rose",
 }
-Country{
+addcountry {
 	file = "egypte.dat",
 	color = "violet",
 }
-Country{
+addcountry {
 	file = "libye.dat",
 	color = "orange",
 }
-Country{
+addcountry {
 	file = "tchad.dat",
 	color = "jaune",
 }
-Country{
+addcountry {
 	file = "kenya.dat",
 	color = "violet",
 }
-Country{
+addcountry {
 	file = "ouganda.dat",
 	color = "vert",
 }
-Country{
+addcountry {
 	file = "tanzanie.dat",
 	color = "bleu",
 }
-Country{
+addcountry {
 	file = "rwanda.dat",
 	color = "rouge",
 }
-Country{
+addcountry {
 	file = "burundi.dat",
 	color = "rose",
 }
-Country{
+addcountry {
 	file = "mozambique.dat",
 	color = "violet",
 }
-Country{
+addcountry {
 	file = "malawi.dat",
 	color = "orange",
 }
-Country{
+addcountry {
 	file = "zimbabwe.dat",
 	color = "gris",
 }
-Country{
+addcountry {
 	file = "zambie.dat",
 	color = "rose",
 }
-Country{
+addcountry {
 	file = "zaire.dat",
 	color = "orange",
 }
-Country{
+addcountry {
 	file = "repcentreafrique.dat",
 	color = "bleu",
 }
-Country{
+addcountry {
 	file = "afriquesud1.dat",
 	color = "rouge",
 }
-Country{
+addcountry {
 	file = "afriquesud2.dat",
 	color = "rouge",
 }
-Country{
+addcountry {
 	file = "lesotho.dat",
 	color = "rose",
 }
-Country{
+addcountry {
 	file = "swaziland.dat",
 	color = "jaune",
 }
-Country{
+addcountry {
 	file = "botswana.dat",
 	color = "orange",
 }
-Country{
+addcountry {
 	file = "angola.dat",
 	color = "gris",
 }
-Country{
+addcountry {
 	file = "namibie.dat",
 	color = "jaune",
 }
-Country{
+addcountry {
 	file = "congo.dat",
 	color = "vert",
 }
-Country{
+addcountry {
 	file = "cabinda.dat",
 	color = "bleu",
 }
-Country{
+addcountry {
 	file = "cameroun.dat",
 	color = "rouge",
 }
-Country{
+addcountry {
 	file = "gabon.dat",
 	color = "rose",
 }
-Country{
+addcountry {
 	file = "riomuni.dat",
 	color = "violet",
 }
-Country{
+addcountry {
 	file = "nigeria.dat",
 	color = "orange",
 }
-Country{
+addcountry {
 	file = "niger.dat",
 	color = "gris",
 }
-Country{
+addcountry {
 	file = "tunisie.dat",
 	color = "jaune",
 }
-Country{
+addcountry {
 	file = "algerie.dat",
 	color = "vert",
 }
-Country{
+addcountry {
 	file = "benin.dat",
 	color = "bleu",
 }
-Country{
+addcountry {
 	file = "togo.dat",
 	color = "rouge",
 }
-Country{
+addcountry {
 	file = "ghana.dat",
 	color = "rose",
 }
-Country{
+addcountry {
 	file = "burkinafaso.dat",
 	color = "violet",
 }
-Country{
+addcountry {
 	file = "coteivoire.dat",
 	color = "orange",
 }
-Country{
+addcountry {
 	file = "mali.dat",
 	color = "jaune",
 }
-Country{
+addcountry {
 	file = "maroc.dat",
 	color = "jaune",
 }
-Country{
+addcountry {
 	file = "mauritanie.dat",
 	color = "rouge",
 }
-Country{
+addcountry {
 	file = "saharaouest.dat",
 	color = "bleu",
 }
-Country{
+addcountry {
 	file = "liberia.dat",
 	color = "rouge",
 }
-Country{
+addcountry {
 	file = "guinee.dat",
 	color = "rose",
 }
-Country{
+addcountry {
 	file = "sierraleone.dat",
 	color = "violet",
 }
-Country{
+addcountry {
 	file = "senegal.dat",
 	color = "orange",
 }
-Country{
+addcountry {
 	file = "gambie.dat",
 	color = "gris",
 }
-Country{
+addcountry {
 	file = "guineebissau.dat",
 	color = "jaune",
 }

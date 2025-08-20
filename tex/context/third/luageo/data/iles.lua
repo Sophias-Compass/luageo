@@ -1,4 +1,6 @@
-Island    {
+local addisland = moduledata.geo.addisland
+
+addisland {
   color = "vert",
   boundary =     {
     {4948,-4575},
@@ -1397,7 +1399,7 @@ Island    {
     {4948,-4575},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {4867,-5660},
@@ -1815,7 +1817,7 @@ Island    {
     {4867,-5660},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {4761,-6222},
@@ -1964,7 +1966,7 @@ Island    {
     {4761,-6222},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {4729,-5877},
@@ -2040,7 +2042,7 @@ Island    {
     {4729,-5877},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {4642,-7119},
@@ -2285,7 +2287,7 @@ Island    {
     {4642,-7119},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {4570,-6746},
@@ -2741,7 +2743,7 @@ Island    {
     {4570,-6746},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {4599,-5520},
@@ -3286,7 +3288,7 @@ Island    {
     {4599,-5520},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {4598,-6023},
@@ -3620,7 +3622,7 @@ Island    {
     {4598,-6023},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4538,-5690},
@@ -3725,7 +3727,7 @@ Island    {
     {4538,-5690},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {4442,-7184},
@@ -3936,7 +3938,7 @@ Island    {
     {4442,-7184},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {4441,-5705},
@@ -4110,7 +4112,7 @@ Island    {
     {4441,-5705},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {4437,-6000},
@@ -4472,7 +4474,7 @@ Island    {
     {4437,-6000},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {4425,-4846},
@@ -4546,7 +4548,7 @@ Island    {
     {4425,-4846},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {4412,-6269},
@@ -4595,7 +4597,7 @@ Island    {
     {4412,-6269},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4405,-1465},
@@ -4636,7 +4638,7 @@ Island    {
     {4405,-1465},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4375,-1314},
@@ -4686,7 +4688,7 @@ Island    {
     {4375,-1314},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {4369,-1387},
@@ -4757,7 +4759,7 @@ Island    {
     {4369,-1387},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {4356,-6876},
@@ -5539,7 +5541,7 @@ Island    {
     {4356,-6876},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {4268,-500},
@@ -5562,7 +5564,7 @@ Island    {
     {4268,-500},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {4264,-1541},
@@ -5615,7 +5617,7 @@ Island    {
     {4264,-1541},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {4219,-3258},
@@ -5701,7 +5703,7 @@ Island    {
     {4219,-3258},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {4193,-5872},
@@ -5836,7 +5838,7 @@ Island    {
     {4193,-5872},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {4146,-8156},
@@ -5959,7 +5961,7 @@ Island    {
     {4146,-8156},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {4097,-4034},
@@ -9731,7 +9733,7 @@ Island    {
     {4097,-4034},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {4089,-4501},
@@ -9778,7 +9780,7 @@ Island    {
     {4089,-4501},
   }
 }
-Island{
+addisland {
   name = "groenland",
   color = "blanc",
   boundary = {
@@ -15462,7 +15464,7 @@ Island{
     {3968,-2149},
   }
 }
-Island{
+addisland {
   color = "gris",
   boundary = {
     {3831,-1282},
@@ -16424,7 +16426,7 @@ Island{
     {3831,-1282},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {3895,-4981},
@@ -16638,7 +16640,7 @@ Island    {
     {3895,-4981},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {3779,-4931},
@@ -16683,7 +16685,7 @@ Island    {
     {3779,-4931},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {3777,-10180},
@@ -16803,7 +16805,7 @@ Island    {
     {3777,-10180},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {3739,-413},
@@ -16841,7 +16843,7 @@ Island    {
     {3739,-413},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {3745,-4772},
@@ -16884,7 +16886,7 @@ Island    {
     {3745,-4772},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {3738,-430},
@@ -16917,7 +16919,7 @@ Island    {
     {3738,-430},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {3695,-3880},
@@ -16954,7 +16956,7 @@ Island    {
     {3695,-3880},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {3634,-4077},
@@ -16977,7 +16979,7 @@ Island    {
     {3634,-4077},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {3628,-71},
@@ -17120,7 +17122,7 @@ Island    {
     {3628,-71},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {3625,-9967},
@@ -17205,7 +17207,7 @@ Island    {
     {3625,-9967},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {3537,-161},
@@ -17258,7 +17260,7 @@ Island    {
     {3537,-161},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {3504,-370},
@@ -17354,7 +17356,7 @@ Island    {
     {3504,-370},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {3502,-8092},
@@ -17497,7 +17499,7 @@ Island    {
     {3502,-8092},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {3502,-9125},
@@ -17586,7 +17588,7 @@ Island    {
     {3502,-9125},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {3495,-8144},
@@ -17744,7 +17746,7 @@ Island    {
     {3495,-8144},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {3480,-9196},
@@ -18009,7 +18011,7 @@ Island    {
     {3480,-9196},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {3446,-8106},
@@ -18131,7 +18133,7 @@ Island    {
     {3446,-8106},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {3419,-7983},
@@ -18207,7 +18209,7 @@ Island    {
     {3419,-7983},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {3414,-8045},
@@ -18342,7 +18344,7 @@ Island    {
     {3414,-8045},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {3391,-4748},
@@ -18413,7 +18415,7 @@ Island    {
     {3391,-4748},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {3381,-8015},
@@ -18648,7 +18650,7 @@ Island    {
     {3381,-8015},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {3357,-7874},
@@ -18736,7 +18738,7 @@ Island    {
     {3357,-7874},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {3315,-7986},
@@ -18800,7 +18802,7 @@ Island    {
     {3315,-7986},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {3299,-9810},
@@ -18865,7 +18867,7 @@ Island    {
     {3299,-9810},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {3265,-261},
@@ -18892,7 +18894,7 @@ Island    {
     {3265,-261},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {3247,-7900},
@@ -19039,7 +19041,7 @@ Island    {
     {3247,-7900},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {3238,-9975},
@@ -19195,7 +19197,7 @@ Island    {
     {3238,-9975},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {3210,-10068},
@@ -19253,7 +19255,7 @@ Island    {
     {3210,-10068},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {3194,-7907},
@@ -19425,7 +19427,7 @@ Island    {
     {3194,-7907},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {3191,-4865},
@@ -19452,7 +19454,7 @@ Island    {
     {3191,-4865},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {3145,-10450},
@@ -19549,7 +19551,7 @@ Island    {
     {3145,-10450},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {3127,-10441},
@@ -19600,7 +19602,7 @@ Island    {
     {3127,-10441},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {3118,-10593},
@@ -19656,7 +19658,7 @@ Island    {
     {3118,-10593},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {3115,-10675},
@@ -19695,7 +19697,7 @@ Island    {
     {3115,-10675},
   }
 }
-Island{
+addisland {
   name = "ile de Terre Neuve",
   color = {rouge},
   boundary = {
@@ -20839,7 +20841,7 @@ Island{
     {3096,-3337},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {3042,-7648},
@@ -21149,7 +21151,7 @@ Island    {
     {3042,-7648},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {2990,-3810},
@@ -21209,7 +21211,7 @@ Island    {
     {2990,-3810},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2890,-5308},
@@ -21234,7 +21236,7 @@ Island    {
     {2890,-5308},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {2858,-3684},
@@ -21273,7 +21275,7 @@ Island    {
     {2858,-3684},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {2840,-5278},
@@ -21317,7 +21319,7 @@ Island    {
     {2840,-5278},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {2822,-3839},
@@ -21486,7 +21488,7 @@ Island    {
     {2822,-3839},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {2811,-3619},
@@ -21680,7 +21682,7 @@ Island    {
     {2811,-3619},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {2753,-4899},
@@ -21789,7 +21791,7 @@ Island    {
     {2753,-4899},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {2717,-5219},
@@ -21822,7 +21824,7 @@ Island    {
     {2717,-5219},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {2463,-4315},
@@ -21947,7 +21949,7 @@ Island    {
     {2463,-4315},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2323,-1643},
@@ -21966,7 +21968,7 @@ Island    {
     {2323,-1643},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {2318,-1723},
@@ -21983,7 +21985,7 @@ Island    {
     {2318,-1723},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {2312,-1713},
@@ -22003,7 +22005,7 @@ Island    {
     {2312,-1713},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {2274,-1551},
@@ -22031,7 +22033,7 @@ Island    {
     {2274,-1551},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {2220,-1512},
@@ -22044,7 +22046,7 @@ Island    {
     {2220,-1512},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {2045,-7192},
@@ -22067,7 +22069,7 @@ Island    {
     {2045,-7192},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {2042,-7207},
@@ -22087,7 +22089,7 @@ Island    {
     {2042,-7207},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {2009,-7111},
@@ -22105,7 +22107,7 @@ Island    {
     {2009,-7111},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {1939,-3885},
@@ -22121,7 +22123,7 @@ Island    {
     {1939,-3885},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {1714,-974},
@@ -22155,7 +22157,7 @@ Island    {
     {1714,-974},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {1676,-949},
@@ -22187,7 +22189,7 @@ Island    {
     {1676,-949},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {1614,-4677},
@@ -22251,7 +22253,7 @@ Island    {
     {1614,-4677},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {1601,-4738},
@@ -22292,7 +22294,7 @@ Island    {
     {1601,-4738},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {1534,-4604},
@@ -22342,7 +22344,7 @@ Island    {
     {1534,-4604},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {1512,-4692},
@@ -22413,7 +22415,7 @@ Island    {
     {1512,-4692},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {1481,-4893},
@@ -22431,7 +22433,7 @@ Island    {
     {1481,-4893},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {1479,-4538},
@@ -22461,7 +22463,7 @@ Island    {
     {1479,-4538},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {1457,-4662},
@@ -22534,7 +22536,7 @@ Island    {
     {1457,-4662},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {1420,-4518},
@@ -22586,7 +22588,7 @@ Island    {
     {1420,-4518},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {1352,-4710},
@@ -22624,7 +22626,7 @@ Island    {
     {1352,-4710},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {1344,-4699},
@@ -22655,7 +22657,7 @@ Island    {
     {1344,-4699},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {1339,-4681},
@@ -22690,7 +22692,7 @@ Island    {
     {1339,-4681},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {1331,-9559},
@@ -22716,7 +22718,7 @@ Island    {
     {1331,-9559},
   }
 }
-Island{
+addisland {
   name = "cuba",
   color = "rose",
   boundary ={
@@ -23404,7 +23406,7 @@ Island{
     {1315,-5095},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {1216,-9349},
@@ -23461,7 +23463,7 @@ Island    {
     {1216,-9349},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {1326,-4677},
@@ -23492,7 +23494,7 @@ Island    {
     {1326,-4677},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {1310,-4984},
@@ -23538,7 +23540,7 @@ Island    {
     {1310,-4984},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {1302,-9478},
@@ -23594,7 +23596,7 @@ Island    {
     {1302,-9478},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {1272,-9430},
@@ -23619,7 +23621,7 @@ Island    {
     {1272,-9430},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {1262,-4422},
@@ -23653,7 +23655,7 @@ Island    {
     {1262,-4422},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {1256,-9376},
@@ -23691,7 +23693,7 @@ Island    {
     {1256,-9376},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {1103,-4036},
@@ -23781,7 +23783,7 @@ Island    {
     {1103,-4036},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {1096,-4702},
@@ -23885,7 +23887,7 @@ Island    {
     {1096,-4702},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {1066,-3892},
@@ -23907,7 +23909,7 @@ Island    {
     {1066,-3892},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {1063,-3712},
@@ -23935,7 +23937,7 @@ Island    {
     {1063,-3712},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {1046,-3772},
@@ -23970,7 +23972,7 @@ Island    {
     {1046,-3772},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {1033,-3757},
@@ -23989,7 +23991,7 @@ Island    {
     {1033,-3757},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {1025,-3715},
@@ -24025,7 +24027,7 @@ Island    {
     {1025,-3715},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {1009,-3733},
@@ -24046,7 +24048,7 @@ Island    {
     {1009,-3733},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {801,-3576},
@@ -24090,7 +24092,7 @@ Island    {
     {801,-3576},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {963,-3705},
@@ -24110,7 +24112,7 @@ Island    {
     {963,-3705},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {938,-3688},
@@ -24138,7 +24140,7 @@ Island    {
     {938,-3688},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {892,-3672},
@@ -24192,7 +24194,7 @@ Island    {
     {892,-3672},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {846,-3658},
@@ -24242,7 +24244,7 @@ Island    {
     {846,-3658},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {801,-3576},
@@ -24286,7 +24288,7 @@ Island    {
     {801,-3576},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {801,-3670},
@@ -24321,7 +24323,7 @@ Island    {
     {801,-3670},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {782,-3674},
@@ -24338,7 +24340,7 @@ Island    {
     {782,-3674},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {773,-3672},
@@ -24349,7 +24351,7 @@ Island    {
     {773,-3672},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {765,-3679},
@@ -24362,7 +24364,7 @@ Island    {
     {765,-3679},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {720,-3709},
@@ -24401,7 +24403,7 @@ Island    {
     {720,-3709},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {681,-3632},
@@ -24422,7 +24424,7 @@ Island    {
     {681,-3632},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {649,-3665},
@@ -24486,7 +24488,7 @@ Island    {
     {649,-3665},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {103,-9431},
@@ -24533,7 +24535,7 @@ Island    {
     {103,-9431},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {6,-5490},
@@ -24609,7 +24611,7 @@ Island    {
     {6,-5490},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-16,-2904},
@@ -24827,7 +24829,7 @@ Island    {
     {-16,-2904},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {-17,-5500},
@@ -24845,7 +24847,7 @@ Island    {
     {-17,-5500},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {-843,-10304},
@@ -24873,7 +24875,7 @@ Island    {
     {-843,-10304},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {-828,-10351},
@@ -24898,7 +24900,7 @@ Island    {
     {-828,-10351},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-1014,-9087},
@@ -24913,7 +24915,7 @@ Island    {
     {-1014,-9087},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-1072,-8955},
@@ -24942,7 +24944,7 @@ Island    {
     {-1072,-8955},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {-1133,-9588},
@@ -24953,7 +24955,7 @@ Island    {
     {-1133,-9588},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {-1146,-10196},
@@ -24971,7 +24973,7 @@ Island    {
     {-1146,-10196},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-1287,-10496},
@@ -24987,7 +24989,7 @@ Island    {
     {-1287,-10496},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {-2603,-4434},
@@ -25116,7 +25118,7 @@ Island    {
     {-2603,-4434},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {-3121,-3662},
@@ -25274,7 +25276,7 @@ Island    {
     {-3121,-3662},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {-3126,-3583},
@@ -25475,7 +25477,7 @@ Island    {
     {-3126,-3583},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-3227,-4331},
@@ -25643,7 +25645,7 @@ Island    {
     {-3227,-4331},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-3298,-4103},
@@ -25858,7 +25860,7 @@ Island    {
     {-3298,-4103},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-3306,-4023},
@@ -25909,7 +25911,7 @@ Island    {
     {-3306,-4023},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-3675,-3321},
@@ -25931,7 +25933,7 @@ Island    {
     {-3675,-3321},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-3732,-3539},
@@ -25980,7 +25982,7 @@ Island    {
     {-3732,-3539},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-3758,-3668},
@@ -26020,7 +26022,7 @@ Island    {
     {-3758,-3668},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-3806,-3385},
@@ -26060,7 +26062,7 @@ Island    {
     {-3806,-3385},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-3867,-3477},
@@ -26118,7 +26120,7 @@ Island    {
     {-3867,-3477},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-3882,-3855},
@@ -26169,7 +26171,7 @@ Island    {
     {-3882,-3855},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4052,-4153},
@@ -26211,7 +26213,7 @@ Island    {
     {-4052,-4153},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4199,-4479},
@@ -26244,7 +26246,7 @@ Island    {
     {-4199,-4479},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4352,-5761},
@@ -26419,7 +26421,7 @@ Island    {
     {-4352,-5761},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4358,-4325},
@@ -26662,7 +26664,7 @@ Island    {
     {-4358,-4325},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4364,-4635},
@@ -26691,7 +26693,7 @@ Island    {
     {-4364,-4635},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4379,-4453},
@@ -26726,7 +26728,7 @@ Island    {
     {-4379,-4453},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4412,-7605},
@@ -26805,7 +26807,7 @@ Island    {
     {-4412,-7605},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4455,-7349},
@@ -26855,7 +26857,7 @@ Island    {
     {-4455,-7349},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4644,-4372},
@@ -26886,7 +26888,7 @@ Island    {
     {-4644,-4372},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4677,-2803},
@@ -26954,7 +26956,7 @@ Island    {
     {-4677,-2803},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4706,-3995},
@@ -26986,7 +26988,7 @@ Island    {
     {-4706,-3995},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4740,-9659},
@@ -27019,7 +27021,7 @@ Island    {
     {-4740,-9659},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-4795,-3578},
@@ -27060,7 +27062,7 @@ Island    {
     {-4795,-3578},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4901,3731},
@@ -27078,7 +27080,7 @@ Island    {
     {4901,3731},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4888,3411},
@@ -27098,7 +27100,7 @@ Island    {
     {4888,3411},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4877,5736},
@@ -27204,7 +27206,7 @@ Island    {
     {4877,5736},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4873,3333},
@@ -27238,7 +27240,7 @@ Island    {
     {4873,3333},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4866,3366},
@@ -27261,7 +27263,7 @@ Island    {
     {4866,3366},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4861,3266},
@@ -27294,7 +27296,7 @@ Island    {
     {4861,3266},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4860,3605},
@@ -27312,7 +27314,7 @@ Island    {
     {4860,3605},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4850,3753},
@@ -27344,7 +27346,7 @@ Island    {
     {4850,3753},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4850,3476},
@@ -27360,7 +27362,7 @@ Island    {
     {4850,3476},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4850,3240},
@@ -27384,7 +27386,7 @@ Island    {
     {4850,3240},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4843,3329},
@@ -27407,7 +27409,7 @@ Island    {
     {4843,3329},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4838,2697},
@@ -27459,7 +27461,7 @@ Island    {
     {4838,2697},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4832,3558},
@@ -27502,7 +27504,7 @@ Island    {
     {4832,3558},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4821,1491},
@@ -27740,7 +27742,7 @@ Island    {
     {4821,1491},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4813,1986},
@@ -27757,7 +27759,7 @@ Island    {
     {4813,1986},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4812,3139},
@@ -27787,7 +27789,7 @@ Island    {
     {4812,3139},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4807,3347},
@@ -27811,7 +27813,7 @@ Island    {
     {4807,3347},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4806,3458},
@@ -27846,7 +27848,7 @@ Island    {
     {4806,3458},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4805,2857},
@@ -27963,7 +27965,7 @@ Island    {
     {4805,2857},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4800,3528},
@@ -27980,7 +27982,7 @@ Island    {
     {4800,3528},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4799,3003},
@@ -28003,7 +28005,7 @@ Island    {
     {4799,3003},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4796,3501},
@@ -28016,7 +28018,7 @@ Island    {
     {4796,3501},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4772,641},
@@ -28485,7 +28487,7 @@ Island    {
     {4772,641},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4755,5967},
@@ -28641,7 +28643,7 @@ Island    {
     {4755,5967},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4738,1719},
@@ -28664,7 +28666,7 @@ Island    {
     {4738,1719},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4728,1597},
@@ -28680,7 +28682,7 @@ Island    {
     {4728,1597},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4724,638},
@@ -28715,7 +28717,7 @@ Island    {
     {4724,638},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4695,1320},
@@ -28755,7 +28757,7 @@ Island    {
     {4695,1320},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4680,1385},
@@ -28826,7 +28828,7 @@ Island    {
     {4680,1385},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4677,5967},
@@ -28940,7 +28942,7 @@ Island    {
     {4677,5967},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4535,8790},
@@ -29017,7 +29019,7 @@ Island    {
     {4535,8790},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4522,8127},
@@ -29036,7 +29038,7 @@ Island    {
     {4522,8127},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4488,8397},
@@ -29236,7 +29238,7 @@ Island    {
     {4488,8397},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {4481,3418},
@@ -29682,7 +29684,7 @@ Island    {
     {4481,3418},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4471,1139},
@@ -29696,7 +29698,7 @@ Island    {
     {4471,1139},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4455,8125},
@@ -29715,7 +29717,7 @@ Island    {
     {4455,8125},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4446,6769},
@@ -29747,7 +29749,7 @@ Island    {
     {4446,6769},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4433,8431},
@@ -29770,7 +29772,7 @@ Island    {
     {4433,8431},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4433,8469},
@@ -29810,7 +29812,7 @@ Island    {
     {4433,8469},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4382,4192},
@@ -29856,7 +29858,7 @@ Island    {
     {4382,4192},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {4340,4612},
@@ -29877,7 +29879,7 @@ Island    {
     {4340,4612},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {4307,3084},
@@ -30268,7 +30270,7 @@ Island    {
     {4307,3084},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {4248,10727},
@@ -30329,7 +30331,7 @@ Island    {
     {4248,10727},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {4193,3536},
@@ -30398,7 +30400,7 @@ Island    {
     {4193,3536},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {4186,10165},
@@ -30424,7 +30426,7 @@ Island    {
     {4186,10165},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {4145,2894},
@@ -30468,7 +30470,7 @@ Island    {
     {4145,2894},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {4135,925},
@@ -30491,7 +30493,7 @@ Island    {
     {4135,925},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {4096,899},
@@ -30605,7 +30607,7 @@ Island    {
     {4096,899},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {3545,1358},
@@ -30652,7 +30654,7 @@ Island    {
     {3545,1358},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {3542,1391},
@@ -30665,7 +30667,7 @@ Island    {
     {3542,1391},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {3520,1394},
@@ -30684,7 +30686,7 @@ Island    {
     {3520,1394},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {3516,1379},
@@ -30763,7 +30765,7 @@ Island    {
     {3516,1379},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {3514,9803},
@@ -30805,7 +30807,7 @@ Island    {
     {3514,9803},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {3474,1140},
@@ -30882,7 +30884,7 @@ Island    {
     {3474,1140},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {3469,1395},
@@ -30892,7 +30894,7 @@ Island    {
     {3469,1395},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {3440,1027},
@@ -30930,7 +30932,7 @@ Island    {
     {3440,1027},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {3364,752},
@@ -31068,7 +31070,7 @@ Island    {
     {3364,752},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {3335,639},
@@ -31139,7 +31141,7 @@ Island    {
     {3335,639},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {3320,9974},
@@ -31177,7 +31179,7 @@ Island    {
     {3320,9974},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {3317,888},
@@ -31195,7 +31197,7 @@ Island    {
     {3317,888},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {3308,656},
@@ -31215,7 +31217,7 @@ Island    {
     {3308,656},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {3303,736},
@@ -31240,7 +31242,7 @@ Island    {
     {3303,736},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {3297,710},
@@ -31268,7 +31270,7 @@ Island    {
     {3297,710},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {3297,674},
@@ -31304,7 +31306,7 @@ Island    {
     {3297,674},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {3268,660},
@@ -31322,7 +31324,7 @@ Island    {
     {3268,660},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {3260,787},
@@ -31407,7 +31409,7 @@ Island    {
     {3260,787},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {3189,8510},
@@ -31778,7 +31780,7 @@ Island    {
     {3189,8510},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {3003,9314},
@@ -31822,7 +31824,7 @@ Island    {
     {3003,9314},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {2827,9132},
@@ -31848,7 +31850,7 @@ Island    {
     {2827,9132},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {2736,8968},
@@ -31885,7 +31887,7 @@ Island    {
     {2736,8968},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {2731,8928},
@@ -31958,7 +31960,7 @@ Island    {
     {2731,8928},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2730,8517},
@@ -32207,7 +32209,7 @@ Island    {
     {2730,8517},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2670,8770},
@@ -32253,7 +32255,7 @@ Island    {
     {2670,8770},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {2580,566},
@@ -32392,7 +32394,7 @@ Island    {
     {2580,566},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2486,8468},
@@ -33257,7 +33259,7 @@ Island    {
     {2486,8468},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {2475,555},
@@ -33459,7 +33461,7 @@ Island    {
     {2475,555},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {2430,1539},
@@ -33472,7 +33474,7 @@ Island    {
     {2430,1539},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {2402,253},
@@ -33506,7 +33508,7 @@ Island    {
     {2402,253},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {2400,1527},
@@ -33554,7 +33556,7 @@ Island    {
     {2400,1527},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {2398,191},
@@ -33608,7 +33610,7 @@ Island    {
     {2398,191},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {2347,93},
@@ -33635,7 +33637,7 @@ Island    {
     {2347,93},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {2295,937},
@@ -33784,7 +33786,7 @@ Island    {
     {2295,937},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2140,2075},
@@ -33873,7 +33875,7 @@ Island    {
     {2140,2075},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {2119,1579},
@@ -33993,7 +33995,7 @@ Island    {
     {2119,1579},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2094,7676},
@@ -34020,7 +34022,7 @@ Island    {
     {2094,7676},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2097,7723},
@@ -34060,7 +34062,7 @@ Island    {
     {2097,7723},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2081,7768},
@@ -34095,7 +34097,7 @@ Island    {
     {2081,7768},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2054,7760},
@@ -34115,7 +34117,7 @@ Island    {
     {2054,7760},
   }
 }
-Island{
+addisland {
   name = "japon",
   color = "rose",
   boundary = {
@@ -34296,7 +34298,7 @@ Island{
     {2044,8076},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {2012,7610},
@@ -34324,7 +34326,7 @@ Island    {
     {2012,7610},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {1947,7814},
@@ -34340,7 +34342,7 @@ Island    {
     {1947,7814},
   }
 }
-Island{
+addisland {
   name = "japon",
   color = "rose",
   boundary = {
@@ -34698,7 +34700,7 @@ Island{
     {1947,7899},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {1941,7798},
@@ -34727,7 +34729,7 @@ Island    {
     {1941,7798},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {1710,7781},
@@ -34772,7 +34774,7 @@ Island    {
     {1710,7781},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {1617,3377},
@@ -34814,7 +34816,7 @@ Island    {
     {1617,3377},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {1611,7697},
@@ -34880,7 +34882,7 @@ Island    {
     {1611,7697},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {1574,3030},
@@ -34904,7 +34906,7 @@ Island    {
     {1574,3030},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {1507,7277},
@@ -35047,7 +35049,7 @@ Island    {
     {1507,7277},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {1241,3535},
@@ -35078,7 +35080,7 @@ Island    {
     {1241,3535},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {1199,6574},
@@ -35319,7 +35321,7 @@ Island    {
     {1199,6574},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {1104,7337},
@@ -35918,7 +35920,7 @@ Island    {
     {1104,7337},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {843,7454},
@@ -35958,7 +35960,7 @@ Island    {
     {843,7454},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {818,8693},
@@ -35985,7 +35987,7 @@ Island    {
     {818,8693},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {812,5584},
@@ -36134,7 +36136,7 @@ Island    {
     {812,5584},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {811,7222},
@@ -36225,7 +36227,7 @@ Island    {
     {811,7222},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {755,7396},
@@ -36319,7 +36321,7 @@ Island    {
     {755,7396},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {755,7458},
@@ -36475,7 +36477,7 @@ Island    {
     {755,7458},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {739,7194},
@@ -36529,7 +36531,7 @@ Island    {
     {739,7194},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {714,7322},
@@ -36633,7 +36635,7 @@ Island    {
     {714,7322},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {692,7461},
@@ -36728,7 +36730,7 @@ Island    {
     {692,7461},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {684,7171},
@@ -36952,7 +36954,7 @@ Island    {
     {684,7171},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {673,7444},
@@ -37020,7 +37022,7 @@ Island    {
     {673,7444},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {653,7412},
@@ -37107,7 +37109,7 @@ Island    {
     {653,7412},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {606,7466},
@@ -37160,7 +37162,7 @@ Island    {
     {606,7466},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {588,7527},
@@ -37575,7 +37577,7 @@ Island    {
     {588,7527},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {554,5567},
@@ -37590,7 +37592,7 @@ Island    {
     {554,5567},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {456,4788},
@@ -37838,7 +37840,7 @@ Island    {
     {456,4788},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {403,7325},
@@ -37869,7 +37871,7 @@ Island    {
     {403,7325},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {334,5714},
@@ -38456,7 +38458,7 @@ Island    {
     {334,5714},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {327,6018},
@@ -38472,7 +38474,7 @@ Island    {
     {327,6018},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {268,7613},
@@ -38501,7 +38503,7 @@ Island    {
     {268,7613},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {225,535},
@@ -38528,7 +38530,7 @@ Island    {
     {225,535},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {141,5787},
@@ -38587,7 +38589,7 @@ Island    {
     {141,5787},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {121,7697},
@@ -38619,7 +38621,7 @@ Island    {
     {121,7697},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {116,6106},
@@ -38644,7 +38646,7 @@ Island    {
     {116,6106},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {86,6150},
@@ -38665,7 +38667,7 @@ Island    {
     {86,6150},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {83,6239},
@@ -38687,7 +38689,7 @@ Island    {
     {83,6239},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {72,6149},
@@ -38710,7 +38712,7 @@ Island    {
     {72,6149},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {68,6249},
@@ -38736,7 +38738,7 @@ Island    {
     {68,6249},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {61,6280},
@@ -38779,7 +38781,7 @@ Island    {
     {61,6280},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {56,5875},
@@ -38839,7 +38841,7 @@ Island    {
     {56,5875},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {51,6190},
@@ -38864,7 +38866,7 @@ Island    {
     {51,6190},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {47,6183},
@@ -38894,7 +38896,7 @@ Island    {
     {47,6183},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {12,7734},
@@ -39070,7 +39072,7 @@ Island    {
     {12,7734},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-1,7849},
@@ -39198,7 +39200,7 @@ Island    {
     {-1,7849},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {-19,7652},
@@ -39244,7 +39246,7 @@ Island    {
     {-19,7652},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {-40,8127},
@@ -39295,7 +39297,7 @@ Island    {
     {-40,8127},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-78,7413},
@@ -39354,7 +39356,7 @@ Island    {
     {-78,7413},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {-86,7648},
@@ -39390,7 +39392,7 @@ Island    {
     {-86,7648},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {-89,6353},
@@ -39496,7 +39498,7 @@ Island    {
     {-89,6353},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {-96,8130},
@@ -39546,7 +39548,7 @@ Island    {
     {-96,8130},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-99,7465},
@@ -39600,7 +39602,7 @@ Island    {
     {-99,7465},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-101,7821},
@@ -39642,7 +39644,7 @@ Island    {
     {-101,7821},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {-106,5952},
@@ -39697,7 +39699,7 @@ Island    {
     {-106,5952},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {-107,7525},
@@ -39734,7 +39736,7 @@ Island    {
     {-107,7525},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-118,8844},
@@ -39791,7 +39793,7 @@ Island    {
     {-118,8844},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {-148,8997},
@@ -39827,7 +39829,7 @@ Island    {
     {-148,8997},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {-153,6463},
@@ -39888,7 +39890,7 @@ Island    {
     {-153,6463},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {-154,9049},
@@ -40019,7 +40021,7 @@ Island    {
     {-154,9049},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-172,7691},
@@ -40142,7 +40144,7 @@ Island    {
     {-172,7691},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-187,7568},
@@ -40189,7 +40191,7 @@ Island    {
     {-187,7568},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {-249,9131},
@@ -40444,7 +40446,7 @@ Island    {
     {-249,9131},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {-264,7384},
@@ -40525,7 +40527,7 @@ Island    {
     {-264,7384},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-277,7363},
@@ -40576,7 +40578,7 @@ Island    {
     {-277,7363},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {-326,8071},
@@ -40663,7 +40665,7 @@ Island    {
     {-326,8071},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {-326,9282},
@@ -40752,7 +40754,7 @@ Island    {
     {-326,9282},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {-335,7204},
@@ -41476,7 +41478,7 @@ Island    {
     {-335,7204},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-356,2351},
@@ -41532,7 +41534,7 @@ Island    {
     {-356,2351},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-370,8047},
@@ -41578,7 +41580,7 @@ Island    {
     {-370,8047},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {-396,9389},
@@ -41636,7 +41638,7 @@ Island    {
     {-396,9389},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {-414,6776},
@@ -41693,7 +41695,7 @@ Island    {
     {-414,6776},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-427,7899},
@@ -41773,7 +41775,7 @@ Island    {
     {-427,7899},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {-443,8313},
@@ -41818,7 +41820,7 @@ Island    {
     {-443,8313},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {-452,9508},
@@ -41901,7 +41903,7 @@ Island    {
     {-452,9508},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {-459,7558},
@@ -41943,7 +41945,7 @@ Island    {
     {-459,7558},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-470,6594},
@@ -42320,7 +42322,7 @@ Island    {
     {-470,6594},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-478,9451},
@@ -42379,7 +42381,7 @@ Island    {
     {-478,9451},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {-485,6869},
@@ -42430,7 +42432,7 @@ Island    {
     {-485,6869},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {-488,7468},
@@ -42467,7 +42469,7 @@ Island    {
     {-488,7468},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-493,6980},
@@ -42534,7 +42536,7 @@ Island    {
     {-493,6980},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {-496,7216},
@@ -42693,7 +42695,7 @@ Island    {
     {-496,7216},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {-496,7404},
@@ -42749,7 +42751,7 @@ Island    {
     {-496,7404},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {-499,9643},
@@ -42828,7 +42830,7 @@ Island    {
     {-499,9643},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-503,7033},
@@ -43003,7 +43005,7 @@ Island    {
     {-503,7033},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-539,9154},
@@ -43043,7 +43045,7 @@ Island    {
     {-539,9154},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {-555,9582},
@@ -43098,7 +43100,7 @@ Island    {
     {-555,9582},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {-560,9030},
@@ -43145,7 +43147,7 @@ Island    {
     {-560,9030},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-566,7142},
@@ -43220,7 +43222,7 @@ Island    {
     {-566,7142},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {-568,7506},
@@ -43346,7 +43348,7 @@ Island    {
     {-568,7506},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {-612,9679},
@@ -43414,7 +43416,7 @@ Island    {
     {-612,9679},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {-679,9192},
@@ -43458,7 +43460,7 @@ Island    {
     {-679,9192},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-683,2597},
@@ -43484,7 +43486,7 @@ Island    {
     {-683,2597},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-711,7836},
@@ -43520,7 +43522,7 @@ Island    {
     {-711,7836},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {-716,7856},
@@ -43591,7 +43593,7 @@ Island    {
     {-716,7856},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {-858,8211},
@@ -43659,7 +43661,7 @@ Island    {
     {-858,8211},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-987,10045},
@@ -43721,7 +43723,7 @@ Island    {
     {-987,10045},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {-900,10006},
@@ -43786,7 +43788,7 @@ Island    {
     {-900,10006},
 }
 }
-Island    {
+addisland {
   color = "orange",
   boundary =     {
     {-1004,8355},
@@ -43821,7 +43823,7 @@ Island    {
     {-1004,8355},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {-1020,10722},
@@ -43992,7 +43994,7 @@ Island    {
     {-1020,10722},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-1060,10112},
@@ -44032,7 +44034,7 @@ Island    {
     {-1060,10112},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-1096,10680},
@@ -44141,7 +44143,7 @@ Island    {
     {-1096,10680},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {-1242,9900},
@@ -44415,7 +44417,7 @@ Island    {
     {-1242,9900},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {-1312,2599},
@@ -45181,7 +45183,7 @@ Island    {
     {-1312,2599},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-1546,9182},
@@ -45215,7 +45217,7 @@ Island    {
     {-1546,9182},
 }
 }
-Island    {
+addisland {
   color = "jaune",
   boundary =     {
     {-2136,8243},
@@ -45272,7 +45274,7 @@ Island    {
     {-2136,8243},
   }
 }
-Island{
+addisland {
   name = "australie",
   color = "orange",
   boundary = {
@@ -48529,7 +48531,7 @@ Island{
     {-2284,8458},
 }
 }
-Island    {
+addisland {
   color = "gris",
   boundary =     {
     {-2380,8639},
@@ -48553,7 +48555,7 @@ Island    {
     {-2380,8639},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-2381,10616},
@@ -49325,7 +49327,7 @@ Island    {
     {-2381,10616},
 }
 }
-Island    {
+addisland {
   color = "violet",
   boundary =     {
     {-2388,8880},
@@ -49368,7 +49370,7 @@ Island    {
     {-2388,8880},
 }
 }
-Island    {
+addisland {
   color = "bleu",
   boundary =     {
     {-2589,8746},
@@ -49691,7 +49693,7 @@ Island    {
     {-2589,8746},
 }
 }
-Island    {
+addisland {
   color = "rose",
   boundary =     {
     {-2501,10441},
@@ -50501,7 +50503,7 @@ Island    {
     {-2501,10441},
 }
 }
-Island    {
+addisland {
   color = "rouge",
   boundary =     {
     {-2803,10080},
@@ -50571,7 +50573,7 @@ Island    {
     {-2803,10080},
 }
 }
-Island    {
+addisland {
   color = "vert",
   boundary =     {
     {-4666,10026},
@@ -50620,7 +50622,7 @@ Island    {
     {-4666,10026},
 }
 }
-Island    {
+addisland {
   color = "blanc",
   boundary =     {
     {-5101,-9929},

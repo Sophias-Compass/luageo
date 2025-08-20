@@ -77,6 +77,25 @@
 
 \continueifinputfile{t-luageo.mkxl}
 
+\starttext
+
+\dostepwiserecurse{0}{360}{10}{
+\startMPpage
+    GlobeDiameter := 8cm ;
+    path p ; p := globe(30,#1)
+        scaled .5GlobeDiameter
+    ;
+    draw p
+        withpen pencircle scaled .2mm
+    ;
+    draw fullcircle
+        scaled GlobeDiameter
+    ;
+\stopMPpage
+}
+
+\stoptext
+
 %\setupcolors[state=start]
 %\usemodule[luageo][color=rothko] % example of a module parameter
 
@@ -104,8 +123,11 @@ Drawn with the luageo module:
 \stopMPcode
 
 The globe below uses a buffer so that it is not redrawn with every typeset.
+
 \startbuffer[demo]
+
 \usemodule [luageo]
+
 \startMPpage
     GlobeDiameter := 8cm ;
     fill fullcircle
@@ -128,7 +150,6 @@ The globe below uses a buffer so that it is not redrawn with every typeset.
 \stopbuffer
 
 \typesetbuffer[demo]
-
 
 \stopsubject
 
