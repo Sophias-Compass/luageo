@@ -17,9 +17,9 @@
 
 % begin info
 %
-% title   : <a short title to explain the module>
-% comment : <a longer description which explains the purpose of the module>
-% status  : <current status of the module>
+% title   : luageo
+% comment : Draw globes in any orientation
+% status  : Barely functional
 %
 % end info
 
