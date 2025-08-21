@@ -41,12 +41,12 @@ local function closecut(p,q) -- we can inline the helpers
     X2 = C * X2
     Y1 = D * Y1
     Y2 = D * Y2
---     -- Add control point for departure from p
---     p[5] = X1 + Y1
---     p[6] = X2 + Y2
---     -- Add control point for approach to q
---     q[3] = X1 - Y1
---     q[4] = X2 - Y2
+     -- Add control point for departure from p
+     p[5] = X1 + Y1
+     p[6] = X2 + Y2
+     -- Add control point for approach to q
+     q[3] = X1 - Y1
+     q[4] = X2 - Y2
 end
 
 local function rotate(p3D)
