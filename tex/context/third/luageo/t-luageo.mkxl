@@ -85,7 +85,7 @@
     path p ; p := globe(30,#1)
         scaled .5GlobeDiameter
     ;
-    draw p
+    fill p
         withpen pencircle scaled .2mm
     ;
     draw fullcircle

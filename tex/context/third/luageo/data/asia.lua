@@ -1,7 +1,7 @@
 local addcountry = moduledata.geo.addcountry
 
 addcountry {
-	file = "russie1bis.dat",
+	file = "russie1.dat",
 	color = "rouge",
 }
 addcountry {
