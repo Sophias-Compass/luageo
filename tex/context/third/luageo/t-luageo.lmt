@@ -36,18 +36,16 @@ local cLat, sLat, cLon, sLon
 --     return { a * v[1], a * v[2] }
 -- end
 
-local hash = { }
-
-local function latlonto3D(p)
-    local lat = p[1]/60
-    local lon = p[2]/60
-    local clat = cosd(lat)
-    return {
-        x = clat*cosd(lon),
-        y = clat*sind(lon),
-        z = sind(lat)
-    }
-end
+-- local function latlonto3D(p)
+--     local lat = p[1]/60
+--     local lon = p[2]/60
+--     local clat = cosd(lat)
+--     return {
+--         x = clat*cosd(lon),
+--         y = clat*sind(lon),
+--         z = sind(lat)
+--     }
+-- end
 
 -- Close the cut from p to q with an arc (actually a cubic bezier, unfortunately).
 
@@ -156,38 +154,114 @@ local islands   = { }
 
 -- { color = "red", file = "name" }
 
-function moduledata.geo.addcountry(d)
-    local name = geo.datafolder .. (d.file or "detauld.dat")
-    local data = io.loaddata(name)
-    if data and #data > 0 then
-        local boundaries = { }
-        for latstring, lonstring in gmatch(data,"%(([%+%-%d]+),([%+%-%d]+)%)") do
-     -- for latstring, lonstring in gmatch(data,"%(([^,]+),([^%)]+)%)") do
-            boundaries[#boundaries+1] = latlonto3D {
-                tonumber(latstring),
-                tonumber(lonstring)
+-- function moduledata.geo.addcountry(d)
+--     local name = geo.datafolder .. (d.file or "default.dat")
+--     local data = io.loaddata(name)
+--     if data and #data > 0 then
+--         local boundaries = { }
+--         for latstring, lonstring in gmatch(data,"%(([%+%-%d]+),([%+%-%d]+)%)") do
+--      -- for latstring, lonstring in gmatch(data,"%(([^,]+),([^%)]+)%)") do
+--             boundaries[#boundaries+1] = latlonto3D {
+--                 tonumber(latstring),
+--                 tonumber(lonstring)
+--             }
+--         end
+--         countries[#countries+1] = {
+--             boundary3D = boundaries,
+--             color      = d.color
+--         }
+--     end
+-- end
+
+-- function moduledata.geo.addisland(d)
+--     local b = d.boundary
+--     if b and #b > 0 then
+--         for i=1,#b do
+--             b[i] = latlonto3D(b[i])
+--         end
+--         islands[#islands+1] = {
+--             boundary3D = b,
+--             color      = d.color,
+--         }
+--     end
+-- end
+
+do
+
+    local function latlonto3D(la,lo)
+        local lat = la/60
+        local lon = lo/60
+        local clat = cosd(lat)
+        return {
+            x = clat*cosd(lon),
+            y = clat*sind(lon),
+            z = sind(lat)
+        }
+    end
+
+    local lpegmatch = lpeg.match
+
+    local lp = lpeg.P("(")
+    local rp = lpeg.P(")")
+    local cm = lpeg.P(",")
+    local ws = lpeg.patterns.whitespace
+
+--     local p = lpeg.Ct (
+--         (1-lp)^0 *
+--         lpeg.Ct (
+--             lp *
+--             ((1-cm)^1/tonumber) *
+--             cm *
+--             ((1-rp)^1/tonumber) *
+--             rp *
+--             ws
+--         )^1
+--     )
+
+    local p = lpeg.Ct (
+        (1-lp)^0 *
+        ((
+            lp *
+            ((1-cm)^1/tonumber) *
+            cm *
+            ((1-rp)^1/tonumber) *
+            rp *
+            ws
+        )/latlonto3D)^1
+    )
+
+    function moduledata.geo.addcountry(d)
+        local name = geo.datafolder .. (d.file or "default.dat")
+        local data = io.loaddata(name)
+        if data and #data > 0 then
+            local boundaries = lpegmatch(p,data)
+--             for i=1,#boundaries do
+--                 boundaries[i] = latlonto3D(boundaries[i])
+--             end
+            countries[#countries+1] = {
+                boundary3D = boundaries,
+                color      = d.color
             }
         end
-        countries[#countries+1] = {
-            boundary3D = boundaries,
-            color      = d.color
-        }
     end
+
+    function moduledata.geo.addisland(d)
+        local b = d.boundary
+        if b and #b > 0 then
+            for i=1,#b do
+--                 b[i] = latlonto3D(b[i])
+                local bi = b[i]
+                b[i] = latlonto3D(bi[1],bi[2])
+            end
+            islands[#islands+1] = {
+                boundary3D = b,
+                color      = d.color,
+            }
+        end
+    end
+
 end
 
-function moduledata.geo.addisland(d)
-    local b = d.boundary
-    if b and #b > 0 then
-        local boundaries = { } -- table of 3D boundary points
-        for p=1,#boundaries do
-            t[p] = latlonto3D(boundaries[p])
-        end
-        islands[#islands+1] = {
-            boundary3D = boundaries,
-            color      = d.color,
-        }
-    end
-end
 
 -- These functions are called each time a globe is made.
 
@@ -291,6 +365,8 @@ local function appendpath(area,step)
     end
 end
 
+-- caching is actually slower unless we bytecompile
+
 statistics.starttiming(geo)
 
 dofile("data/iles.lua")
@@ -305,6 +381,7 @@ dofile("data/afrique.lua")
 statistics.stoptiming(geo)
 
 print(statistics.elapsedseconds(geo))
+-- os.exit()
 
 if MP then
 
