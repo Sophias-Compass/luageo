@@ -22,55 +22,7 @@ geo.datafolder = "data/"
 
 local cLat, sLat, cLon, sLon
 
--- Three vector operations
-
--- local function sum(u, v)
---     return { u[1] + v[1], u[2] + v[2] }
--- end
-
--- local function dif(u, v)
---     return { u[1] - v[1], u[2] - v[2] }
--- end
-
--- local function scale(a, v)
---     return { a * v[1], a * v[2] }
--- end
-
--- local function latlonto3D(p)
---     local lat = p[1]/60
---     local lon = p[2]/60
---     local clat = cosd(lat)
---     return {
---         x = clat*cosd(lon),
---         y = clat*sind(lon),
---         z = sind(lat)
---     }
--- end
-
 -- Close the cut from p to q with an arc (actually a cubic bezier, unfortunately).
-
--- local function closecut(p,q) -- we can inline the helpers
---     -- Basis vector bisecting angle pOq.
---     local X = sum(p, q)
---     -- Orthogonal basis vector in plane pOq.
---     local Y = dif(p, q)
---     -- The magnitude of X used in computing coefficients
---     local magX = sqrt(X[1]^2 + X[2]^2)
---     -- Coefficients for X and Y are not obvious!
---     local C = 4/(3*magX) - 1/6
---     local D = (1 - magX/6) / (2 + magX)
---     -- Won't need the basis vectors again, so just scale them.
---     X = scale(C, X)
---     Y = scale(D, Y)
---     -- Add control point for departure from p
---     local Ac = sum(X, Y)
---     p[5] = Ac[1]
---     p[6] = Ac[2]
---     -- Add control point for approach to q
---     local Bc = dif(X, Y)
---     q[3] = Bc[1]
---     q[4] = Bc[2]
--- end
 
 local function closecut(p,q) -- we can inline the helpers
     -- Basis vector bisecting angle pOq.
@@ -89,27 +41,13 @@ local function closecut(p,q) -- we can inline the helpers
     X2 = C * X2
     Y1 = D * Y1
     Y2 = D * Y2
-    -- Add control point for departure from p
-    p[5] = X1 + Y1
-    p[6] = X2 + Y2
-    -- Add control point for approach to q
-    q[3] = X1 - Y1
-    q[4] = X2 - Y2
+--     -- Add control point for departure from p
+--     p[5] = X1 + Y1
+--     p[6] = X2 + Y2
+--     -- Add control point for approach to q
+--     q[3] = X1 - Y1
+--     q[4] = X2 - Y2
 end
-
--- local function rotate(p3D)
---     local p3DxcLon = p3D.x*cLon
---     local p3DxsLon = p3D.x*sLon
---     local p3DycLon = p3D.y*cLon
---     local p3DysLon = p3D.y*sLon
---     local p3DysLonplusp3DxcLon = p3DysLon + p3DxcLon
---     return {
---         y =   p3DycLon - p3DxsLon,
---      -- x =  (p3DysLon + p3DxcLon )*cLat + p3D.z*sLat,
---         x =  (p3DysLonplusp3DxcLon)*cLat + p3D.z*sLat,
---         z = -(p3DysLonplusp3DxcLon)*sLat + p3D.z*cLat
---     }
--- end
 
 local function rotate(p3D)
     local p3DxcLon = p3D.x*cLon
@@ -122,7 +60,6 @@ local function rotate(p3D)
         p3DycLon - p3DxsLon,
         -(p3DysLonplusp3DxcLon)*sLat + p3D.z*cLat
 end
-
 
 -- better do something data/Cameriquenord.dat: -
 --
@@ -154,38 +91,6 @@ local islands   = { }
 
 -- { color = "red", file = "name" }
 
--- function moduledata.geo.addcountry(d)
---     local name = geo.datafolder .. (d.file or "default.dat")
---     local data = io.loaddata(name)
---     if data and #data > 0 then
---         local boundaries = { }
---         for latstring, lonstring in gmatch(data,"%(([%+%-%d]+),([%+%-%d]+)%)") do
---      -- for latstring, lonstring in gmatch(data,"%(([^,]+),([^%)]+)%)") do
---             boundaries[#boundaries+1] = latlonto3D {
---                 tonumber(latstring),
---                 tonumber(lonstring)
---             }
---         end
---         countries[#countries+1] = {
---             boundary3D = boundaries,
---             color      = d.color
---         }
---     end
--- end
-
--- function moduledata.geo.addisland(d)
---     local b = d.boundary
---     if b and #b > 0 then
---         for i=1,#b do
---             b[i] = latlonto3D(b[i])
---         end
---         islands[#islands+1] = {
---             boundary3D = b,
---             color      = d.color,
---         }
---     end
--- end
-
 do
 
     local function latlonto3D(la,lo)
@@ -201,43 +106,33 @@ do
 
     local lpegmatch = lpeg.match
 
-    local lp = lpeg.P("(")
-    local rp = lpeg.P(")")
-    local cm = lpeg.P(",")
-    local ws = lpeg.patterns.whitespace
+    local lparent    = lpeg.P("(")
+    local rparent    = lpeg.P(")")
+    local comma      = lpeg.P(",")
+    local whitespace = lpeg.patterns.whitespace
+    local restofline = (1-whitespace)^0
+    local comment    = lpeg.P("%") * restofline
+    local pair       = lparent
+                     * ((1-comma  )^1/tonumber)
+                     * comma
+                     * ((1-rparent)^1/tonumber)
+                     * rparent
 
---     local p = lpeg.Ct (
---         (1-lp)^0 *
---         lpeg.Ct (
---             lp *
---             ((1-cm)^1/tonumber) *
---             cm *
---             ((1-rp)^1/tonumber) *
---             rp *
---             ws
---         )^1
---     )
-
-    local p = lpeg.Ct (
-        (1-lp)^0 *
-        ((
-            lp *
-            ((1-cm)^1/tonumber) *
-            cm *
-            ((1-rp)^1/tonumber) *
-            rp *
-            ws
-        )/latlonto3D)^1
-    )
+    local p =
+        comment^0  * whitespace^0
+      * restofline * whitespace^0
+      * lpeg.Ct (
+            (
+                pair/latlonto3D * whitespace^0
+              + comment         * whitespace^0
+            )^1
+        )
 
     function moduledata.geo.addcountry(d)
         local name = geo.datafolder .. (d.file or "default.dat")
         local data = io.loaddata(name)
         if data and #data > 0 then
             local boundaries = lpegmatch(p,data)
---             for i=1,#boundaries do
---                 boundaries[i] = latlonto3D(boundaries[i])
---             end
             countries[#countries+1] = {
                 boundary3D = boundaries,
                 color      = d.color
@@ -249,7 +144,6 @@ do
         local b = d.boundary
         if b and #b > 0 then
             for i=1,#b do
---                 b[i] = latlonto3D(b[i])
                 local bi = b[i]
                 b[i] = latlonto3D(bi[1],bi[2])
             end
@@ -268,50 +162,6 @@ end
 -- Lua makes the globe and returns the disconnected path
 
 -- Make a path for the area and add it to the fullglobepath list.
-
--- local function appendpath(fullglobepath,area)
---     local f = { }                               -- The path.
---     local b = area.boundary3D
---     for p=1, #b do
---         local view = rotate(b[p])               -- Rotate the point area.boundary3D to new coordinates view={x, y, z}.
---         if view.x > 0 then                      -- If the point is on our side of the horizon, then it is added.
---             f[#f+1] = { view.y, view.z }        -- Project 3D view points to 2D path pairs and add to path
---             if f.cut and f.visible then         -- If the path is visible and currently being cut...
---               closecut(f[#f-1],f[#f])           -- add control points to previous point and current point...
---               f.cut = nil                       -- and stop cutting.
---             end
---             -- Any visible point means the area is visible.
---             f.visible = true
---         elseif f.visible then
---             -- If the point is over the horizon, then it is not added and we note that this is a horizon cut.
---             f.cut = true
---         else
---             -- We don't need to cut an area that isn't visible.
---             f.cutendtostart = true
---         end
---     end
---     if f.visible and #f > 1 then
---         -- A visible path needs to be closed and added to the fullglobepath list.
---         if f.cut or f.cutendtostart then
---             -- If we are in the middle of a cut, or if the path started with a cut...
---             -- add control points to this point and first point.
---             closecut(f[#f],f[1])
---         end
---         -- Add "cycle" to the end of the path so it can be filled.
---         f[#f+1] = "cycle"
---         -- Clean up so this stuff isn't added to fullglobepath.
---         f.visible       = nil
---         f.cut           = nil
---         f.cutendtostart = nil
---         fullglobepath[#fullglobepath+1] = {
---             path   = f,
---             append = true
---         }
---         -- I don't know how to do colors for this.
---         -- fullglobepath[#fullglobepath] = area.color
---     end
---     -- If the area is visible, add path to fullglobepath list.
--- end
 
 local function appendpath(area,step)
     local boundary = area.boundary3D
@@ -358,6 +208,7 @@ local function appendpath(area,step)
         -- Add "cycle" to the end of the path so it can be filled.
         n = n + 1 ; path[n] = "cycle"
         -- Clean up so this stuff isn't added to fullglobepath.
+--         inspect(path)
         return {
             path   = path,
             append = true
@@ -365,7 +216,7 @@ local function appendpath(area,step)
     end
 end
 
--- caching is actually slower unless we bytecompile
+-- caching is actually slower unless we byte compile
 
 statistics.starttiming(geo)
 
@@ -393,6 +244,33 @@ if MP then
         --
         local path = { }
         local step = 1
+        for i=1, #countries do
+            local p = appendpath(countries[i],step)
+            if p then
+                path[#path+1] = p
+            end
+        end
+        for i=1, #islands do
+            local p = appendpath(islands[i],step)
+            if p then
+                path[#path+1] = p
+            end
+        end
+        mp.inject.path(path)
+        --
+        cLat = 0
+        sLat = 0
+        cLon = 0
+        sLon = 0
+    end
+
+    function MP.globetrot(Lat,Lon,step)
+        cLat = cosd(Lat)
+        sLat = sind(Lat)
+        cLon = cosd(Lon)
+        sLon = sind(Lon)
+        --
+        local path = { }
         for i=1, #countries do
             local p = appendpath(countries[i],step)
             if p then

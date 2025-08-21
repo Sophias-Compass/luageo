@@ -11,4 +11,5 @@ if known context_luageo : endinput ; fi
 
 boolean context_luageo ; context_luageo := true ;
 
-vardef globe(expr lat, lon) = MP.globe(lat, lon) enddef ;
+vardef globe    (expr lat, lon)      = MP.globe    (lat, lon)      enddef ;
+vardef globetrot(expr lat, lon, stp) = MP.globetrot(lat, lon, stp) enddef ;

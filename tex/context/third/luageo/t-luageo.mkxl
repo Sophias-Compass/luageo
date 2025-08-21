@@ -77,16 +77,21 @@
 
 \continueifinputfile{t-luageo.mkxl}
 
+% \nopdfcompression
+
 \starttext
 
-\dostepwiserecurse{0}{360}{10}{
+\dostepwiserecurse{0}{360}{360}{
 \startMPpage
     GlobeDiameter := 8cm ;
-    path p ; p := globe(30,#1)
+%     path p ; p := globe(30,#1)
+    path p ; p := globetrot(30,#1,5)
         scaled .5GlobeDiameter
     ;
     draw p
-        withpen pencircle scaled .2mm
+    withcurvature 0
+%         withpen pencircle scaled .2mm
+        withpen pencircle scaled .01mm
     ;
     draw fullcircle
         scaled GlobeDiameter
@@ -138,6 +143,7 @@ The globe below uses a buffer so that it is not redrawn with every typeset.
     ;
     draw p
         withpen pencircle scaled .2mm
+%         withpen pencircle scaled .05mm
         withcolor blue
         withtransparency (1,.5) ;
     fill p
