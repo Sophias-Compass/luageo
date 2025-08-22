@@ -14,16 +14,41 @@
 %  ftp://ftp.blm.gov/pub/gis/wdbprg.zip
 % According to https://ctan.math.washington.edu/tex-archive/graphics/pstricks/contrib/pst-geo/doc/pst-geo-doc.pdf
 
-\usepath[../../../../tex/context/third/luageo,../../../../tex/context/third/luageo/data] % Remove when the module is in the tree.
+%\usepath[../../../../tex/context/third/luageo,../../../../tex/context/third/luageo/data] % Remove when the module is in the tree.
 
 \usemodule[luageo]
 
-\usetypescriptfile[libertinus]
-\setupbodyfont [libertinus,11pt]%
+%\usetypescriptfile[libertinus]
+%\setupbodyfont [libertinus,11pt]%
 
 %\enabletrackers[metapost*]
 %\enabletrackers[metapost.scripts]
 %\enabletrackers[metapost.lua]
+
+\starttext
+
+\dostepwiserecurse{0}{360}{10}{
+\startMPpage
+    GlobeDiameter := 8cm ;
+%     path p ; p := globe(30,#1)
+    path p ; p := globetrot(30,#1,5)
+        scaled .5GlobeDiameter
+    ;
+    draw p
+    withcurvature 0
+%         withpen pencircle scaled .2mm
+        withpen pencircle scaled .01mm
+    ;
+    draw fullcircle
+        scaled GlobeDiameter
+    ;
+\stopMPpage
+}
+
+\stoptext
+
+
+
 
 \starttext
 
