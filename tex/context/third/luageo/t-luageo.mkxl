@@ -83,6 +83,29 @@
 \usetypescriptfile[libertinus]
 \setupbodyfont [libertinus,11pt]%
 
+\starttext
+
+\dostepwiserecurse{0}{360}{5}{
+\startMPpage
+    GlobeDiameter := 8cm ;
+%     path p ; p := globe(30,#1)
+    path p ; p := globe(30,#1)
+        scaled .5GlobeDiameter
+    ;
+    draw p
+    withcurvature 0
+%         withpen pencircle scaled .2mm
+        withpen pencircle scaled .01mm
+    ;
+%    draw fullcircle
+%        scaled GlobeDiameter
+%    ;
+\stopMPpage
+}
+
+\stoptext
+
+
 %\enabletrackers[metapost*]
 %\enabletrackers[metapost.scripts]
 %\enabletrackers[metapost.lua]
