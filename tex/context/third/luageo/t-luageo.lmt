@@ -10,7 +10,11 @@ local tonumber = tonumber
 local cosd, sind, sqrt = math.cosd, math.sind, math.sqrt
 local gmatch = string.gmatch
 
+--
 -- Load all of the data from the data files, converting latitude, longitude pairs to 3D points.
+--
+
+-- Set the data files' location.
 
 moduledata     = moduledata or { }
 local geo      = { }
@@ -18,81 +22,17 @@ moduledata.geo = geo
 
 geo.datafolder = "data/"
 
--- Takes a latitude, longitude pair (in MINUTES) and returns a 3D point on a unit sphere.
-
-local cLat, sLat, cLon, sLon
-
--- Close the cut from p to q with an arc (actually a cubic bezier, unfortunately).
-
-local function closecut(p,q) -- we can inline the helpers
-    -- Basis vector bisecting angle pOq.
-    local X1 = p[1] + q[1]
-    local X2 = p[2] + q[2]
-    -- Orthogonal basis vector in plane pOq.
-    local Y1 = p[1] - q[1]
-    local Y2 = p[2] - q[2]
-    -- The magnitude of X used in computing coefficients
-    local magX = sqrt(X1^2 + X2^2)
-    -- Coefficients for X and Y are not obvious!
-    local C = 4/(3*magX) - 1/6
-    local D = (1 - magX/6) / (2 + magX)
-    -- Won't need the basis vectors again, so just scale them.
-    X1 = C * X1
-    X2 = C * X2
-    Y1 = D * Y1
-    Y2 = D * Y2
-     -- Add control point for departure from p
-     p[5] = X1 + Y1
-     p[6] = X2 + Y2
-     -- Add control point for approach to q
-     q[3] = X1 - Y1
-     q[4] = X2 - Y2
-end
-
-local function rotate(p3D)
-    local p3DxcLon = p3D.x*cLon
-    local p3DxsLon = p3D.x*sLon
-    local p3DycLon = p3D.y*cLon
-    local p3DysLon = p3D.y*sLon
-    local p3DysLonplusp3DxcLon = p3DysLon + p3DxcLon
-    return
-        (p3DysLonplusp3DxcLon)*cLat + p3D.z*sLat,
-        p3DycLon - p3DxsLon,
-        -(p3DysLonplusp3DxcLon)*sLat + p3D.z*cLat
-end
-
--- better do something data/Cameriquenord.dat: -
---
---   return {
---     {
---         file = "mexique.dat",
---         color = "violet",
---     },
---     {
---         color = "orange",
---         file = "usa1.dat",
---     },
---     {
---         file = "usa2.dat",
---         color = "orange",
---     },
---     {
---         file = "canada.dat",
---         color = "jaune",
---     }
--- }
-
---  country table
+-- Create the tables that will hold 3D boundary points for countries and islands.
 
 local countries = { }
 local islands   = { }
 
--- Reads continent data to make countries list with color = "color" and file = "file".
-
--- { color = "red", file = "name" }
+-- Define functions needed to convert the data into 3D boundary points.
 
 do
 
+    -- Convert latitude and longitude (in minutes) to 3D point on the unit sphere.
+  
     local function latlonto3D(la,lo)
         local lat = la/60
         local lon = lo/60
@@ -103,6 +43,8 @@ do
             z = sind(lat)
         }
     end
+    
+    -- LPeg parses the data in the files
 
     local lpegmatch = lpeg.match
 
@@ -127,6 +69,8 @@ do
               + comment         * whitespace^0
             )^1
         )
+    
+    -- Functions used in the data files deliver parse and convert the data
 
     function moduledata.geo.addcountry(d)
         local name = geo.datafolder .. (d.file or "default.dat")
@@ -156,12 +100,73 @@ do
 
 end
 
+-- Read the data files to produce the countries and islands tables.
+-- Caching is actually slower unless we byte compile.
 
--- These functions are called each time a globe is made.
+statistics.starttiming(geo)
 
--- Lua makes the globe and returns the disconnected path
+dofile("data/iles.lua")
+dofile("data/ameriquenord.lua")
+dofile("data/caraibes.lua")
+dofile("data/ameriquecentrale.lua")
+dofile("data/ameriquesud.lua")
+dofile("data/europe.lua")
+dofile("data/asia.lua")
+dofile("data/afrique.lua")
 
--- Make a path for the area and add it to the fullglobepath list.
+statistics.stoptiming(geo)
+
+print(statistics.elapsedseconds(geo))
+
+
+--
+-- Convert 3D points to a specific 2D projection
+--
+
+-- Funtion to rotate the 3D points before projection
+
+local cLat, sLat, cLon, sLon
+
+local function rotate(p3D)
+    local p3DxcLon = p3D.x*cLon
+    local p3DxsLon = p3D.x*sLon
+    local p3DycLon = p3D.y*cLon
+    local p3DysLon = p3D.y*sLon
+    local p3DysLonplusp3DxcLon = p3DysLon + p3DxcLon
+    return
+        (p3DysLonplusp3DxcLon)*cLat + p3D.z*sLat,
+        p3DycLon - p3DxsLon,
+        -(p3DysLonplusp3DxcLon)*sLat + p3D.z*cLat
+end
+
+-- Close the cut from p to q with an arc (actually a cubic bezier, unfortunately).
+
+local function closecut(p,q)
+    -- Basis vector bisecting angle pOq.
+    local X1 = p[1] + q[1]
+    local X2 = p[2] + q[2]
+    -- Orthogonal basis vector in plane pOq.
+    local Y1 = p[1] - q[1]
+    local Y2 = p[2] - q[2]
+    -- The magnitude of X used in computing coefficients
+    local magX = sqrt(X1^2 + X2^2)
+    -- Coefficients for X and Y are not obvious!
+    local C = 4/(3*magX) - 1/6
+    local D = (1 - magX/6) / (2 + magX)
+    -- Won't need the basis vectors again, so just scale them.
+    X1 = C * X1
+    X2 = C * X2
+    Y1 = D * Y1
+    Y2 = D * Y2
+    -- Add control point for departure from p
+    p[5] = X1 + Y1
+    p[6] = X2 + Y2
+    -- Add control point for approach to q
+    q[3] = X1 - Y1
+    q[4] = X2 - Y2
+end
+
+-- Project a boundary from 3D to 2D, only the visible part, closing along the horizon, and add it to the compound path for MetaPost.
 
 local function appendpath(area,step)
     local boundary = area.boundary3D
@@ -175,13 +180,10 @@ local function appendpath(area,step)
     for i=1,#boundary,step do
         prev = last
          -- Rotate the point area.boundary3D to new coordinates view={x, y, z}.
---         local view = rotate(boundary[i])
         local x, y, z = rotate(boundary[i])
         -- If the point is on our side of the horizon, then it is added.
---         if view.x > 0 then
         if x > 0 then
             -- Project 3D view points to 2D path pairs and add to path
---             last = { view.y, view.z }
             last = { y, z }
             n = n + 1 ; path[n] = last
             if cut and visible then -- If the path is visible and currently being cut...
@@ -216,23 +218,7 @@ local function appendpath(area,step)
     end
 end
 
--- caching is actually slower unless we byte compile
-
-statistics.starttiming(geo)
-
-dofile("data/iles.lua")
-dofile("data/ameriquenord.lua")
-dofile("data/caraibes.lua")
-dofile("data/ameriquecentrale.lua")
-dofile("data/ameriquesud.lua")
-dofile("data/europe.lua")
-dofile("data/asia.lua")
-dofile("data/afrique.lua")
-
-statistics.stoptiming(geo)
-
-print(statistics.elapsedseconds(geo))
--- os.exit()
+-- The MetaPost functions that return the projected compound path
 
 if MP then
 
