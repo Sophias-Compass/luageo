@@ -82,7 +82,7 @@
 \starttext
 
 \dostepwiserecurse{0}{360}{360}{
-\startMPpage
+\startMPpage[offset=1dk]
     GlobeDiameter := 8cm ;
     path p ; p := globe(30,#1)
 %     path p ; p := globetrot(30,#1,5)
@@ -102,9 +102,9 @@
         withcolor darkgreen
         withtransparency (1,.5)
     ;
-    draw fullcircle
-        scaled GlobeDiameter
-    ;
+%    draw fullcircle
+%        scaled GlobeDiameter
+%    ;
 \stopMPpage
 }
 
