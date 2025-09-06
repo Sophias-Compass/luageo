@@ -84,8 +84,8 @@
 \dostepwiserecurse{0}{360}{360}{
 \startMPpage[offset=1dk]
     GlobeDiameter := 8cm ;
-    path p ; p := globe(30,#1)
-%     path p ; p := globetrot(30,#1,5)
+%    path p ; p := globe(30,#1)
+    path p ; p := globetrot(30,#1,7)
         scaled .5GlobeDiameter
     ;
     fill fullcircle
