@@ -84,14 +84,23 @@
 \dostepwiserecurse{0}{360}{360}{
 \startMPpage
     GlobeDiameter := 8cm ;
-%     path p ; p := globe(30,#1)
-    path p ; p := globetrot(30,#1,5)
+    path p ; p := globe(30,#1)
+%     path p ; p := globetrot(30,#1,5)
         scaled .5GlobeDiameter
+    ;
+    fill fullcircle
+        scaled GlobeDiameter
+        withcolor blue
+        withtransparency (1,.3)
     ;
     draw p
     withcurvature 0
 %         withpen pencircle scaled .2mm
         withpen pencircle scaled .01mm
+    ;
+    fill p
+        withcolor darkgreen
+        withtransparency (1,.5)
     ;
     draw fullcircle
         scaled GlobeDiameter
