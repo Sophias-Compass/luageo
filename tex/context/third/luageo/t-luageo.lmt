@@ -139,36 +139,6 @@ local function rotate(p3D)
         -(p3DysLonplusp3DxcLon)*sLat + p3D.z*cLat
 end
 
--- Close the cut from p to q with an arc (actually a cubic bezier, unfortunately).
-
-local function closecut(p,q)
-    -- Basis vector bisecting angle pOq.
-    local X1 = p[1] + q[1]
-    local X2 = p[2] + q[2]
-    -- Orthogonal basis vector in plane pOq.
-    local Y1 = p[1] - q[1]
-    local Y2 = p[2] - q[2]
-    -- The magnitude of X used in computing coefficients
-    local magX = sqrt(X1^2 + X2^2)
-    local magY = sqrt(Y1^2 + Y2^2)
-    -- Coefficients for X and Y are not obvious!
-    local C = 4/(3*magX) - 1/6
-    local D = (1 - magX/6) / (2 + magX)
-    -- Won't need the basis vectors again, so just scale them.
-    X1 = C * X1
-    X2 = C * X2
-    Y1 = D * Y1
-    Y2 = D * Y2
-    if magY > 0.1 then
-        -- Add control point for departure from p
-        p[5] = X1 + Y1
-        p[6] = X2 + Y2
-        -- Add control point for approach to q
-        q[3] = X1 - Y1
-        q[4] = X2 - Y2
-    end
-end
-
 -- Project a boundary from 3D to 2D, only the visible part, closing along the horizon, and add it to the compound path for MetaPost.
 
 local function appendpath(area,step)
@@ -182,15 +152,39 @@ local function appendpath(area,step)
             path[#path+1] = { y, z }
         end
     end
-    if #path > 2 then
-        -- ensure that the last point matches the first point
-	    path[#path+1] = path[1]
-        -- Add the control points to get curved paths
+    -- ensure that the last point matches the first point
+    if #path > 2 and path[#path] ~= path[1] then
+        path[#path+1] = path[1]
+    end
+    -- For paths that have at least three distinct points...
+    if #path > 3 then
         for i=1,#path do
-            if path[i+1] then
-                closecut(path[i],path[i+1])
-            else 
-                closecut(path[i],path[1])
+            local p = path[i]
+            local q = path[i+1] or path[1]
+            -- Vector from q to p.
+            local Y1 = p[1] - q[1]
+            local Y2 = p[2] - q[2]
+            local Ysqr = Y1^2 + Y2^2
+            if Ysqr > 0.01 then
+                -- Vector bisecting angle pOq.
+                local X1 = p[1] + q[1]
+                local X2 = p[2] + q[2]
+                -- The magnitude of X used in computing coefficients
+                local magX = sqrt(X1^2 + X2^2)
+                -- Coefficients for X and Y are not obvious!
+                local C = 4/(3*magX) - 1/6
+                local D = (1 - magX/6) / (2 + magX)
+                -- Won't need the basis vectors again, so just scale them.
+                X1 = C * X1
+                X2 = C * X2
+                Y1 = D * Y1
+                Y2 = D * Y2
+                -- Add control point for departure from p
+                p[5] = X1 + Y1
+                p[6] = X2 + Y2
+                -- Add control point for approach to q
+                q[3] = X1 - Y1
+                q[4] = X2 - Y2
             end
         end
         -- Add "cycle" to the end of the path so it can be filled.
