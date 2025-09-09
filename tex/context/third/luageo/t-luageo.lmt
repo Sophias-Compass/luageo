@@ -74,7 +74,7 @@ do
 
     function moduledata.geo.addcountry(d)
         local name = geo.datafolder .. (d.file or "default.dat")
-        local data = io.loaddata(name)
+        local data = io.loaddata(resolvers.findfile(name))
         if data and #data > 0 then
             local boundaries = lpegmatch(p,data)
             countries[#countries+1] = {
@@ -105,14 +105,14 @@ end
 
 statistics.starttiming(geo)
 
-dofile("data/iles.lua")
-dofile("data/ameriquenord.lua")
-dofile("data/caraibes.lua")
-dofile("data/ameriquecentrale.lua")
-dofile("data/ameriquesud.lua")
-dofile("data/europe.lua")
-dofile("data/asia.lua")
-dofile("data/afrique.lua")
+dofile(resolvers.findfile("data/ameriquenord.lua"))
+dofile(resolvers.findfile("data/caraibes.lua"))
+dofile(resolvers.findfile("data/ameriquecentrale.lua"))
+dofile(resolvers.findfile("data/ameriquesud.lua"))
+dofile(resolvers.findfile("data/europe.lua"))
+dofile(resolvers.findfile("data/asia.lua"))
+dofile(resolvers.findfile("data/afrique.lua"))
+dofile(resolvers.findfile("data/iles.lua"))
 
 statistics.stoptiming(geo)
 
