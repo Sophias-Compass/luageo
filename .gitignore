@@ -2,3 +2,5 @@
 *.pdf
 *.synctex
 *.tuc
+
+!luageo-manual.pdf
