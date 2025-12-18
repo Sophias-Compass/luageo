@@ -27,13 +27,6 @@
 
 \unprotect
 
-%\defineMPinstance
-%  [luageo]
-%  [\s!format=metafun,
-%   \s!extensions=\v!yes,
-%   \s!initializations=\v!yes,
-%   \c!method=\s!double]
-
 \startMPdefinitions
     loadmodule "luageo" ;
 \stopMPdefinitions
@@ -77,86 +70,49 @@
 
 \continueifinputfile{t-luageo.mkxl}
 
-% \nopdfcompression
-
-%\setupcolors[state=start]
-%\usemodule[luageo][color=rothko] % example of a module parameter
-
-\usetypescriptfile[libertinus]
-\setupbodyfont [libertinus,11pt]%
-
 \starttext
 
-\dostepwiserecurse{0}{360}{5}{
-\startMPpage[offset=1dk]
-    GlobeDiameter := 8cm ;
-    path p ; p := globe(30,#1)
-%    path p ; p := globetrot(30,#1,7)
-        scaled .5GlobeDiameter
-    ;
-    fill fullcircle
-        scaled GlobeDiameter
-        withcolor blue
-        withtransparency (1,.3)
-    ;
-    draw p
-    withcurvature 0
-         withpen pencircle scaled .2mm
-%        withpen pencircle scaled .01mm
-    ;
-    fill p
-        withcolor darkgreen
-        withtransparency (1,.8)
-    ;
-%    draw fullcircle
-%        scaled GlobeDiameter
-%    ;
-\stopMPpage
-}
+Luageo is simple \ConTeXt\ module for drawing globes. A globe can be drawn with any location centered using the MetaPost macro \type{globe( , )}. The two arguments are the latitude and longitude of the center location. The macro returns a single MetaPost path consisting of all visible country and island boundaries. This path can be drawn or filled. For example, the MetaPost commands
 
-\stoptext
+\startalignment[center]
+\type{draw globe(21,0) scaled 1.5cm ;}
+\stopalignment
+and
+\startalignment[center]
+\type{fill globe(21,0) scaled 1.5cm ;}
+\stopalignment
 
-%\enabletrackers[metapost*]
-%\enabletrackers[metapost.scripts]
-%\enabletrackers[metapost.lua]
+produce
 
-\starttext
-
-\startsubject [title=luageo]
-
-I should write some documentation.
-
-Drawn with the luageo module:
-\blank[big]
-
+\startalignment[center]
+\dontleavehmode
 \startMPcode
-   GlobeDiameter := 10cm ;
-   fill fullcircle scaled GlobeDiameter withcolor .9white ;    % Fill a circle with the water color.
-   fill globe(40, -108) scaled .5GlobeDiameter withcolor .75white ;% Draw the land.
-   draw fullcircle scaled GlobeDiameter withcolor black ;      % Add a border, if you want.
+   draw globe(21,0) scaled 1.5cm xshifted -3.5cm;% Draw the land.
+   label(textext("and"),origin);
+   fill globe(21,0) scaled 1.5cm xshifted 3.5cm;% Draw the land.
 \stopMPcode
+\stopalignment
 
-The globe below uses a buffer so that it is not redrawn with every typeset.
+
+To draw a complete globe, first fill a circle with an ocean color, or draw a horizon circle. You can do both, as in the complete example below.
 
 \startbuffer[demo]
 
-\usemodule [luageo]
+\usemodule[luageo]
 
 \startMPpage
-    GlobeDiameter := 8cm ;
+    GlobeDiameter := 5cm ;
     fill fullcircle
         scaled GlobeDiameter
         withcolor .7white + .3blue;
-    path p ; p := globe(23, 0)
-        scaled .5GlobeDiameter
-    ;
-    draw p
-        withpen pencircle scaled .2mm
-%         withpen pencircle scaled .05mm
-        withcolor blue
-        withtransparency (1,.5) ;
+    path p ; p := globe(51, 5)
+        scaled .5GlobeDiameter ;
     fill p
         withcolor darkgreen
+        withtransparency (1,.5) ;
+    draw p
+        withpen pencircle scaled .2mm
+        withcolor blue
         withtransparency (1,.5) ;
     draw fullcircle
         scaled GlobeDiameter
@@ -164,8 +120,13 @@ The globe below uses a buffer so that it is not redrawn with every typeset.
 \stopMPpage
 \stopbuffer
 
-\typesetbuffer[demo]
+\typebuffer[demo]
 
-\stopsubject
+\startalignment[center]
+\dontleavehmode
+\typesetbuffer[demo]
+\stopalignment
+
+If the MetaPost code is contained in a buffer, the globe will not be redrawn with every typeset. This can dramatically reduce typesetting time for a document with many globes.
 
 \stoptext
