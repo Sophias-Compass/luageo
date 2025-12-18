@@ -10,16 +10,16 @@
 %D           date=\currentdate,
 %D      copyright={Gavin Polhemus}]
 %C
-%C This comment should have license information.
+%C License: GNU GENERAL PUBLIC LICENSE ver. 3, or any later version
 %C Data source: GLOBE Binaries DECODING : World Public Domain Dbase : F.Pospeschil, A.Rivera (1999)
-%C  ftp://ftp.blm.gov/pub/gis/wdbprg.zip
-%C According to https://ctan.math.washington.edu/tex-archive/graphics/pstricks/contrib/pst-geo/doc/pst-geo-doc.pdf
+%C  ftp://ftp.blm.gov/pub/gis/wdbprg.zip 
+%C  (according to https://ctan.math.washington.edu/tex-archive/graphics/pstricks/contrib/pst-geo/doc/pst-geo-doc.pdf).
 
 % begin info
 %
 % title   : luageo
 % comment : Draw globes in any orientation
-% status  : Barely functional
+% status  : Functional, simple
 %
 % end info
 
