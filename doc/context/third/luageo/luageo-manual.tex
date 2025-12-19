@@ -68,6 +68,48 @@ The globe below uses a buffer so that it is not redrawn with every typeset.
 
 \typesetbuffer[demo]
 
+% \nopdfcompression
+
+%\setupcolors[state=start]
+%\usemodule[luageo][color=rothko] % example of a module parameter
+
+%\usetypescriptfile[libertinus]
+%\setupbodyfont [libertinus,11pt]%
+
+%\starttext
+%
+%\dostepwiserecurse{0}{360}{5}{
+%\startMPpage[offset=1dk]
+%    GlobeDiameter := 8cm ;
+%    path p ; p := globe(30,#1)
+%%    path p ; p := globetrot(30,#1,7)
+%        scaled .5GlobeDiameter
+%    ;
+%    fill fullcircle
+%        scaled GlobeDiameter
+%        withcolor blue
+%        withtransparency (1,.3)
+%    ;
+%    draw p
+%    withcurvature 0
+%         withpen pencircle scaled .2mm
+%%        withpen pencircle scaled .01mm
+%    ;
+%    fill p
+%        withcolor darkgreen
+%        withtransparency (1,.8)
+%    ;
+%%    draw fullcircle
+%%        scaled GlobeDiameter
+%%    ;
+%\stopMPpage
+%}
+%
+%\stoptext
+
+%\enabletrackers[metapost*]
+%\enabletrackers[metapost.scripts]
+%\enabletrackers[metapost.lua]
 
 \stoptitle
 
