@@ -45,4 +45,4 @@ At some point, this data was available at GLOBE Binaries DECODING : World Public
 (according to the [pst-geo maual](https://ctan.math.washington.edu/tex-archive/graphics/pstricks/contrib/pst-geo/doc/pst-geo-doc.pdf), p.4).
 
 The luageo module was inspired by the MetaPost extension [mp-geo](https://melusine.eu.org/syracuse/G/git/?p=mp-geo.git;a=summary) by Christophe Poulain.
-No code from mp-geo is used in luageo, but the map data came from the mp-geo module.
+No code from mp-geo is used in luageo, but the map data came from the mp-geo extension.
