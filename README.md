@@ -1,7 +1,7 @@
 Luageo  
 A ConTeXt module for drawing globes  
 by Gavin Polhemus  
-version: 2025.12.18  
+version: 2026.01.07  
 License: GNU GENERAL PUBLIC LICENSE ver. 3, or any later version
 
 # Luageo
