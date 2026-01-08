@@ -101,7 +101,7 @@ produce
 \stopalignment
 
 
-To draw a complete globe either start by filling a circle with the ocean color or finish by drawing a horizon circle. You can do both, as in the complete example below code. This code produces the large globe on this manual's first page.
+To draw a complete globe either start by filling a circle with the ocean color or finish by drawing a horizon circle. You can do both, as in the complete example code below. This code produces the large globe on this manual's first page.
 
 \typebuffer[demo]
 
@@ -131,12 +131,12 @@ The code above was placed in a buffer so the globe is not redrawn with every typ
 
 \startsubject[title={Limitations and experiments}]
 
-Currently, luageo only draws complete globes, not other maps. The path always includes country boundaries but no other features. (Large lakes are visible if they are on country boundaries.)
+Currently, Luageo only draws complete globes, not other maps. The path always includes country boundaries but no other features. (Large lakes are visible if they are on country boundaries.)
 You cannot fill the countries with different colors. You cannot draw only the coasts.
 I do not know when the country boundaries were last updated. They do show a unified Germany, so the map data is not too ancient.
 
-The level of detail in luageo globes is excessive, resulting in very large file sizes. For example, the globe at the beginning of this manual is 2.5MB. The size can be reduced using an experimental command \type{globetrot( , , )}.
-The third argument is a step size, telling luageo to skip points when calculating the path. (For example, a step size of 2 will skip every other point.) The globe below uses a step size of 20 and is only 73KB.
+The level of detail in Luageo globes is excessive, resulting in very large file sizes. For example, the globe at the beginning of this manual is 2.5MB. The size can be reduced using an experimental command \type{globetrot( , , )}.
+The third argument is a step size, telling Luageo to skip points when calculating the path. (For example, a step size of 2 will skip every other point.) The globe below uses a step size of 20 and is only 73KB.
 
 \startbuffer[exampletrot]
 \usemodule [luageo]
@@ -158,10 +158,10 @@ The third argument is a step size, telling luageo to skip points when calculatin
 \typesetbuffer[exampletrot]
 \stopalignment
 
-However, notice that the country boundaries are visible but inconsistient. This happens because the boundaries between countries are drawn twice, once for each country.
+However, notice the spotty country boundaries. This happens because the boundaries between countries are are included in the path twice, once for each country.
 If the step mechanism selects different points for each country along the shared border, the two borders will not match. The resulting gaps are visible.
 
-The \type{globetrot} command may be removed if a better solution is found.
+The \type{globetrot} command may be depricated if a better solution is found.
 
 
 %\dostepwiserecurse{0}{360}{5}{
@@ -197,22 +197,23 @@ The \type{globetrot} command may be removed if a better solution is found.
 
 \startsubject[title={Contribute to Luageo}]
 
-Luageo is a small module, containing only a few hundred lines of code (in addition to the data files). Most of the code is written in lua, with some help from MetaPost and ConTeXt. If you are interested in integrating lua and MetaPost for graphics in \ConTeXt, luageo might be an interesting example for you.
-Visit \goto{luageo on GitHub}[url(https://github.com/Sophias-Compass/luageo)] to improve luageo or to use it as a starting point for your own \ConTeXt+MetaPost+lua project.
+Luageo is a small module, containing only a few hundred lines of code (in addition to the data files). Most of the code is written in Lua, with some help from MetaPost and ConTeXt. If you are interested in integrating Lua and MetaPost for graphics in \ConTeXt, Luageo might be an interesting example for you.
+Visit \goto{Luageo on GitHub}[url(https://github.com/Sophias-Compass/Luageo)] to improve Luageo or to use it as a starting point for your own \ConTeXt+MetaPost+Lua project.
 
-There are several obvious opportunities for improving luageo:
+There are several obvious opportunities for improving Luageo:
 
 \startitemize
   \item More \ConTeXt-like behavior. For example, adding a \type{key=value} interface.
   \item More globe views and map projections.
-  \item Better map data. For example, \goto{Natural Earth}[url(https://www.naturalearthdata.com)] has less detailed data appropriate for luageo's small globes, as well as more detailed data for zoomed-in maps of countries or regions. For local maps, \goto{OpenStreetMap}[url(https://www.openstreetmap.org)] might be a good source.
+  \item Better map data. For example, \goto{Natural Earth}[url(https://www.naturalearthdata.com)] has less detailed data appropriate for Luageo's small globes, as well as more detailed data for zoomed-in maps of countries or regions. For local maps, \goto{OpenStreetMap}[url(https://www.openstreetmap.org)] might be a good source.
 \stopitemize
 
-You can also find some of my other projects on GitHub. I created luageo to help with diagrams for a physics textbook. Eventually, I hope to write other modules related to the textbook project.
+You can also find some of my other projects on GitHub. I created Luageo to help with diagrams for a physics textbook. Eventually, I hope to write other modules related to the textbook project.
+I would love to have more collaborators. You don't have to know any physics!
 
 \startsubject[title={Acknowledgements}]
 
-The luageo module was inspired by the MetaPost extension \goto{mp-geo}[url(https://melusine.eu.org/syracuse/G/git/?p=mp-geo.git;a=summary)] by Christophe Poulain. No code from mp-geo is used in luageo, but the map data came from the mp-geo extension.
+The Luageo module was inspired by the MetaPost extension \goto{mp-geo}[url(https://melusine.eu.org/syracuse/G/git/?p=mp-geo.git;a=summary)] by Christophe Poulain. No code from mp-geo is used in Luageo, but the map data came from the mp-geo extension.
 
 The map data is adapted from the \goto{CIA World DataBank II}[url(http://www.evl.uic.edu/pape/data/WDB/)]. At some point, this data was available at GLOBE Binaries DECODING : World Public Domain Dbase : F.Pospeschil, A.Rivera (1999), ftp://ftp.blm.gov/pub/gis/wdbprg.zip (according to the \goto{pst-geo maual}[url(https://ctan.math.washington.edu/tex-archive/graphics/pstricks/contrib/pst-geo/doc/pst-geo-doc.pdf)], p.4).
 

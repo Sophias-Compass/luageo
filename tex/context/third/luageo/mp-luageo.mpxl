@@ -14,7 +14,7 @@ boolean context_luageo ; context_luageo := true ;
 vardef globe    (expr lat, lon)      = MP.globe    (lat, lon)      scaled 0.5 enddef ;
 vardef globetrot(expr lat, lon, stp) = MP.globetrot(lat, lon, stp) scaled 0.5 enddef ;
 
-% Note: The lua program puts the path on a unit sphere (radius = 1) as is common in trigonometry.
+% Note: The Lua program puts the path on a unit sphere (radius = 1) as is common in trigonometry.
 %       MetaPost circles (e.g. fullcircle) have diameter 1.
 %       The globe and globerot commands above include 'scaled 0.5'
 %       to create a MetaPost path with diameter 1. 
