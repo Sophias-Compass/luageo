@@ -156,7 +156,7 @@ local function appendpath(area,step)
     if #path > 2 and path[#path] ~= path[1] then
         path[#path+1] = path[1]
     end
-    -- For paths that have at least three distinct points...
+    -- For paths that have at least three distinct points, curve any big horizon cuts.
     if #path > 3 then
         for i=1,#path do
             local p = path[i]
